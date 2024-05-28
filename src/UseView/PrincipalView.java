@@ -12,19 +12,26 @@ public class PrincipalView extends javax.swing.JFrame {
    
     public PrincipalView() {
         initComponents();
-       
-        ImageIcon icono = new ImageIcon("../img/a1.jpg");
+        
+       String rutaImagen = "./img/a1.jpg"; // Subimos un nivel desde useview para acceder a la carpeta img
 
-       
+        // Cargar la imagen desde el archivo
+        ImageIcon icono = new ImageIcon(getClass().getClassLoader().getResource(rutaImagen));
+
+        // Obtener el tamaño del JLabel
+        int anchoLabel = LabelImg.getWidth();
+        int altoLabel = LabelImg.getHeight();
+
+        // Obtener la imagen del icono
         Image imagen = icono.getImage();
 
-        int anchoNuevo = 100; 
-        int altoNuevo = 100; 
-        Image imagenAjustada = imagen.getScaledInstance(anchoNuevo, altoNuevo, Image.SCALE_SMOOTH);
+        // Ajustar el tamaño de la imagen para que se ajuste al JLabel
+        Image imagenAjustada = imagen.getScaledInstance(anchoLabel, altoLabel, Image.SCALE_SMOOTH);
 
-      
+        // Crear un nuevo ImageIcon con la imagen ajustada
         ImageIcon iconoAjustado = new ImageIcon(imagenAjustada);
-        
+
+        // Establecer el nuevo ImageIcon en el JLabel
         LabelImg.setIcon(iconoAjustado);
         
         
@@ -82,28 +89,30 @@ public class PrincipalView extends javax.swing.JFrame {
             }
         });
 
+        LabelImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/a1.jpg"))); // NOI18N
+        LabelImg.setToolTipText("");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(276, 276, 276)
-                        .addComponent(PrincipalButton))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(155, 155, 155)
-                        .addComponent(LabelImg, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(451, Short.MAX_VALUE))
+                .addGap(155, 155, 155)
+                .addComponent(LabelImg, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(106, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PrincipalButton)
+                .addGap(231, 231, 231))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addComponent(LabelImg, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addGap(58, 58, 58)
                 .addComponent(PrincipalButton)
-                .addGap(93, 93, 93))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -113,7 +122,8 @@ public class PrincipalView extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
