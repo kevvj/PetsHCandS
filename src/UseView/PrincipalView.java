@@ -3,6 +3,8 @@ package UseView;
 
 import javax.swing.JFrame;
 import java.awt.Color;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 
 
 public class PrincipalView extends javax.swing.JFrame {
@@ -10,16 +12,29 @@ public class PrincipalView extends javax.swing.JFrame {
    
     public PrincipalView() {
         initComponents();
-        //asdasdasdasd
+       
+        ImageIcon icono = new ImageIcon("../img/a1.jpg");
+
+       
+        Image imagen = icono.getImage();
+
+        int anchoNuevo = 100; 
+        int altoNuevo = 100; 
+        Image imagenAjustada = imagen.getScaledInstance(anchoNuevo, altoNuevo, Image.SCALE_SMOOTH);
+
+      
+        ImageIcon iconoAjustado = new ImageIcon(imagenAjustada);
+        
+        LabelImg.setIcon(iconoAjustado);
+        
+        
         PrincipalButton.setUI(new RoundedButtonUI(new Color(100, 180, 255), Color.BLACK));
         
-        // Configurar el JFrame (esto podría estar en initComponents si usas el diseñador de NetBeans)
-        
-        this.setLayout(null); // Usa un layout nulo para posicionar el botón manualmente
-        PrincipalButton.setBounds(50, 50, 200, 50); // Ajusta las dimensiones y la posición según sea necesario
+        this.setLayout(null); 
+        PrincipalButton.setBounds(50, 50, 200, 50);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
-        this.setLocationRelativeTo(null); // Centra el JFrame en la pantalla
+        this.setLocationRelativeTo(null); 
         this.setLayout(null);
        
 
@@ -38,7 +53,7 @@ public class PrincipalView extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         PrincipalButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        LabelImg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,15 +92,15 @@ public class PrincipalView extends javax.swing.JFrame {
                         .addGap(276, 276, 276)
                         .addComponent(PrincipalButton))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(136, 136, 136)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(470, Short.MAX_VALUE))
+                        .addGap(155, 155, 155)
+                        .addComponent(LabelImg, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(451, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(42, 42, 42)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LabelImg, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                 .addComponent(PrincipalButton)
                 .addGap(93, 93, 93))
@@ -167,8 +182,8 @@ public class PrincipalView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel LabelImg;
     private javax.swing.JButton PrincipalButton;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
