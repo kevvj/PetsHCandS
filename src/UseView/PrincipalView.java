@@ -13,7 +13,6 @@ public class PrincipalView extends javax.swing.JFrame {
    
     public PrincipalView() {
         initComponents();
-        
        String rutaImagen = "./img/a1.jpg"; // Subimos un nivel desde useview para acceder a la carpeta img
 
         // Cargar la imagen desde el archivo
@@ -44,9 +43,11 @@ public class PrincipalView extends javax.swing.JFrame {
         this.setVisible(true);
         this.setLocationRelativeTo(null); 
         this.setLayout(null);
-        
         ScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         ScrollPane.getVerticalScrollBar().setUI(new CustomScrollBarUI());
+        
+        
+        Cerrar.setUI(new RoundedButtonUI(new Color(182, 184, 214), Color.BLACK));
 
 
     }
@@ -66,8 +67,11 @@ public class PrincipalView extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         PrincipalButton = new javax.swing.JButton();
         LabelImg = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        Cerrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -80,14 +84,14 @@ public class PrincipalView extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 103, Short.MAX_VALUE)
+            .addGap(0, 86, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 497, Short.MAX_VALUE)
+            .addGap(0, 504, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 503));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 43, -1, 510));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -112,7 +116,7 @@ public class PrincipalView extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(295, 295, 295)
                         .addComponent(PrincipalButton)))
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addContainerGap(178, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,9 +130,35 @@ public class PrincipalView extends javax.swing.JFrame {
 
         ScrollPane.setViewportView(jPanel3);
 
-        jPanel1.add(ScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 700, 500));
+        jPanel1.add(ScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 710, 510));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 570));
+        jPanel4.setBackground(new java.awt.Color(255, 153, 153));
+
+        Cerrar.setText("CERRAR");
+        Cerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CerrarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(0, 718, Short.MAX_VALUE)
+                .addComponent(Cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(Cerrar)
+                .addGap(0, 15, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 40));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -136,6 +166,10 @@ public class PrincipalView extends javax.swing.JFrame {
     private void PrincipalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrincipalButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PrincipalButtonActionPerformed
+
+    private void CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarActionPerformed
+        dispose();
+    }//GEN-LAST:event_CerrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,11 +214,13 @@ public class PrincipalView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Cerrar;
     private javax.swing.JLabel LabelImg;
     private javax.swing.JButton PrincipalButton;
     private javax.swing.JScrollPane ScrollPane;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
 }
