@@ -2,7 +2,6 @@
 package UseView;
 
 import javax.swing.JFrame;
-import javax.swing.JButton;
 import java.awt.Color;
 
 
@@ -11,7 +10,7 @@ public class PrincipalView extends javax.swing.JFrame {
    
     public PrincipalView() {
         initComponents();
-        
+        //asdasdasdasd
         PrincipalButton.setUI(new RoundedButtonUI(new Color(100, 180, 255), Color.BLACK));
         
         // Configurar el JFrame (esto podría estar en initComponents si usas el diseñador de NetBeans)
@@ -72,16 +71,16 @@ public class PrincipalView extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(273, 273, 273)
+                .addGap(276, 276, 276)
                 .addComponent(PrincipalButton)
-                .addContainerGap(330, Short.MAX_VALUE))
+                .addContainerGap(327, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(377, Short.MAX_VALUE)
+                .addContainerGap(385, Short.MAX_VALUE)
                 .addComponent(PrincipalButton)
-                .addGap(101, 101, 101))
+                .addGap(93, 93, 93))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
