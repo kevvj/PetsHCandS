@@ -23,7 +23,7 @@ public class controller implements ActionListener {
 
     public void Run() {
         vpr.setResizable(false);
-        vpr.setLocationRelativeTo(null);
+        
         vpr.setTitle("INICIO");
         vpr.setVisible(true);
 
@@ -31,16 +31,16 @@ public class controller implements ActionListener {
 
     public void HandleHC() {
         HC.setResizable(false);
-        HC.setLocationRelativeTo(null);
-        HC.setTitle("INICIO");
+        
+        HC.setTitle("Hair Cut");
         HC.setVisible(true);
 
     }
 
     public void HandleSpa() {
         spa.setResizable(false);
-        spa.setLocationRelativeTo(null);
-        spa.setTitle("INICIO");
+        
+        spa.setTitle("Spa");
         spa.setVisible(true);
 
     }

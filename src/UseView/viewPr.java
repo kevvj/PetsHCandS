@@ -22,6 +22,7 @@ public class viewPr extends javax.swing.JFrame {
      */
     public viewPr() {
         initComponents();
+        setLocationRelativeTo(null);
          String rutaImagen1 = "./img/a1.jpg"; 
        String rutaImagen2 = "./img/a2.jpg"; 
 
