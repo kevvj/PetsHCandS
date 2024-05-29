@@ -7,7 +7,7 @@ import javax.swing.JScrollBar;
 
 public class CustomScrollBarUI extends BasicScrollBarUI {
 
-    private final Color thumbColor = new Color(200, 0, 0, 110);
+    private final Color thumbColor = new Color(91, 196, 175, 102);
     private final Color trackColor = new Color(220, 220, 220); // Gris claro
 
     @Override
