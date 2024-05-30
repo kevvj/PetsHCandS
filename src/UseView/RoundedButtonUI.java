@@ -33,6 +33,7 @@ public class RoundedButtonUI extends BasicButtonUI {
         button.setForeground(foregroundColor);
         button.setContentAreaFilled(false);
         button.setFocusPainted(false);
+        button.setBorderPainted(false);
 
         // Cambiar el cursor del mouse cuando pasa sobre el botón
         button.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));

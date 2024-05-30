@@ -23,10 +23,8 @@ public class controller implements ActionListener {
 
     public void Run() {
         vpr.setResizable(false);
-        
         vpr.setTitle("INICIO");
         vpr.setVisible(true);
-
     }
 
     public void HandleHC() {
