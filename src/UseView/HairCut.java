@@ -4,7 +4,9 @@
  */
 package UseView;
 
+import com.raven.datechooser.SelectedDate;
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JScrollPane;
@@ -56,6 +58,8 @@ public class HairCut extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollBar1 = new javax.swing.JScrollBar();
+        jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         HClabelimg = new javax.swing.JLabel();
@@ -70,15 +74,18 @@ public class HairCut extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         dateChooser1 = new com.raven.datechooser.DateChooser();
-        jPanel2 = new javax.swing.JPanel();
+        am10 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        am11 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
+        am12 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
+        am1 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         ConfirmButton = new javax.swing.JButton();
+        FechayHoratxt = new javax.swing.JLabel();
+
+        jLabel4.setText("jLabel4");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -101,6 +108,11 @@ public class HairCut extends javax.swing.JFrame {
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 petNamejtfFocusLost(evt);
+            }
+        });
+        petNamejtf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                petNamejtfActionPerformed(evt);
             }
         });
 
@@ -138,59 +150,112 @@ public class HairCut extends javax.swing.JFrame {
         jLabel6.setText("Time");
 
         dateChooser1.setForeground(new java.awt.Color(204, 0, 255));
+        dateChooser1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dateChooser1MouseClicked(evt);
+            }
+        });
 
-        jPanel2.setPreferredSize(new java.awt.Dimension(78, 0));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        am10.setPreferredSize(new java.awt.Dimension(78, 0));
+        am10.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                am10MouseDragged(evt);
+            }
+        });
+        am10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                am10MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                am10MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                am10MouseExited(evt);
+            }
+        });
+        am10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel7.setText("10:00 AM");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 30));
+        am10.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 30));
 
-        jPanel3.setPreferredSize(new java.awt.Dimension(78, 22));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        am11.setPreferredSize(new java.awt.Dimension(78, 22));
+        am11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                am11MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                am11MouseExited(evt);
+            }
+        });
+        am11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel10.setText("11:00 AM");
-        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 30));
+        am11.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 30));
 
-        jPanel4.setPreferredSize(new java.awt.Dimension(78, 22));
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        am12.setPreferredSize(new java.awt.Dimension(78, 22));
+        am12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                am12MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                am12MouseExited(evt);
+            }
+        });
+        am12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel11.setText("12:00 AM");
-        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 30));
+        am12.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 30));
 
-        jPanel5.setPreferredSize(new java.awt.Dimension(78, 0));
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        am1.setPreferredSize(new java.awt.Dimension(78, 0));
+        am1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                am1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                am1MouseExited(evt);
+            }
+        });
+        am1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel12.setText("01:00 PM");
-        jPanel5.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 30));
+        am1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 30));
 
         ConfirmButton.setText("Confirm");
+        ConfirmButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConfirmButtonActionPerformed(evt);
+            }
+        });
+
+        FechayHoratxt.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout PanelCitaLayout = new javax.swing.GroupLayout(PanelCita);
         PanelCita.setLayout(PanelCitaLayout);
         PanelCitaLayout.setHorizontalGroup(
             PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelCitaLayout.createSequentialGroup()
-                .addGap(124, 124, 124)
+                .addGap(125, 125, 125)
                 .addComponent(ConfirmButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCitaLayout.createSequentialGroup()
                 .addContainerGap(50, Short.MAX_VALUE)
                 .addGroup(PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(am1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
                     .addComponent(jLabel5)
                     .addGroup(PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(dateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelCitaLayout.createSequentialGroup()
-                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(am10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(am11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(21, 21, 21)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(am12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(FechayHoratxt, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36))
         );
         PanelCitaLayout.setVerticalGroup(
@@ -204,14 +269,16 @@ public class HairCut extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(am11, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(am12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(am10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(19, 19, 19)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addComponent(am1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(FechayHoratxt, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
                 .addComponent(ConfirmButton)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -314,6 +381,62 @@ public class HairCut extends javax.swing.JFrame {
         PanelCita.setVisible(true);
     }//GEN-LAST:event_SaveButtonActionPerformed
 
+    private void petNamejtfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_petNamejtfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_petNamejtfActionPerformed
+
+    private void ConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmButtonActionPerformed
+       SelectedDate D = dateChooser1.getSelectedDate();
+        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
+        FechayHoratxt.setText(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
+        
+    }//GEN-LAST:event_ConfirmButtonActionPerformed
+
+    private void dateChooser1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dateChooser1MouseClicked
+        
+    }//GEN-LAST:event_dateChooser1MouseClicked
+
+    private void am10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseClicked
+        System.out.println("CALLATE LA BOCA CHAMO");
+    }//GEN-LAST:event_am10MouseClicked
+
+    private void am10MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseDragged
+        
+    }//GEN-LAST:event_am10MouseDragged
+
+    private void am10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseEntered
+        
+        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_am10MouseEntered
+
+    private void am10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseExited
+        setCursor(Cursor.getDefaultCursor());
+    }//GEN-LAST:event_am10MouseExited
+
+    private void am11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am11MouseEntered
+        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_am11MouseEntered
+
+    private void am11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am11MouseExited
+        setCursor(Cursor.getDefaultCursor());
+    }//GEN-LAST:event_am11MouseExited
+
+    private void am12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am12MouseEntered
+        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_am12MouseEntered
+
+    private void am12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am12MouseExited
+       setCursor(Cursor.getDefaultCursor());
+    }//GEN-LAST:event_am12MouseExited
+
+    private void am1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am1MouseEntered
+        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_am1MouseEntered
+
+    private void am1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am1MouseExited
+        setCursor(Cursor.getDefaultCursor());
+    }//GEN-LAST:event_am1MouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -359,9 +482,14 @@ public class HairCut extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ConfirmButton;
     private javax.swing.JTextArea Detailstxt;
+    private javax.swing.JLabel FechayHoratxt;
     private javax.swing.JLabel HClabelimg;
     private javax.swing.JPanel PanelCita;
     private javax.swing.JButton SaveButton;
+    private javax.swing.JPanel am1;
+    private javax.swing.JPanel am10;
+    private javax.swing.JPanel am11;
+    private javax.swing.JPanel am12;
     private com.raven.datechooser.DateChooser dateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -369,14 +497,12 @@ public class HairCut extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
+    private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField petNamejtf;
