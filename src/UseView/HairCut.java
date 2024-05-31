@@ -4,13 +4,17 @@
  */
 package UseView;
 
+import com.raven.datechooser.DateChooser;
 import com.raven.datechooser.SelectedDate;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JTextField;
 import src.clients;
 
 /**
@@ -268,25 +272,26 @@ public class HairCut extends javax.swing.JFrame {
         PanelCitaLayout.setHorizontalGroup(
             PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelCitaLayout.createSequentialGroup()
-                .addGap(125, 125, 125)
-                .addComponent(ConfirmButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCitaLayout.createSequentialGroup()
-                .addContainerGap(50, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(am1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel5)
-                    .addGroup(PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(dateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelCitaLayout.createSequentialGroup()
-                            .addComponent(am10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(am11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(21, 21, 21)
-                            .addComponent(am12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(FechayHoratxt, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36))
+                    .addGroup(PanelCitaLayout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(ConfirmButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(am1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel6)
+                        .addComponent(jLabel5)
+                        .addGroup(PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(dateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelCitaLayout.createSequentialGroup()
+                                .addComponent(am10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(am11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(21, 21, 21)
+                                .addComponent(am12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(FechayHoratxt, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
         PanelCitaLayout.setVerticalGroup(
             PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -341,14 +346,14 @@ public class HairCut extends javax.swing.JFrame {
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1))
                         .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(idOwner, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(petNamejtf, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(ownerNametxt))
-                        .addContainerGap())
-                    .addComponent(idOwner)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -422,8 +427,8 @@ public class HairCut extends javax.swing.JFrame {
     }//GEN-LAST:event_DetailstxtFocusGained
 
     private void SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButtonActionPerformed
-        PanelCita.setVisible(true);
-        cli.setName(ownerNametxt.getText());
+        
+        
     }//GEN-LAST:event_SaveButtonActionPerformed
 
     private void petNamejtfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_petNamejtfActionPerformed
@@ -432,7 +437,7 @@ public class HairCut extends javax.swing.JFrame {
 
     private void ConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmButtonActionPerformed
 
-        cli.makeAppointment();
+        
         
     }//GEN-LAST:event_ConfirmButtonActionPerformed
 
@@ -546,6 +551,48 @@ public class HairCut extends javax.swing.JFrame {
             }
         });
     }
+
+    public JButton getConfirmButton() {
+        return ConfirmButton;
+    }
+
+    public void setConfirmButton(JButton ConfirmButton) {
+        this.ConfirmButton = ConfirmButton;
+    }
+
+    public JButton getSaveButton() {
+        return SaveButton;
+    }
+
+    public void setSaveButton(JButton SaveButton) {
+        this.SaveButton = SaveButton;
+    }
+
+    public JTextField getOwnerNametxt() {
+        return ownerNametxt;
+    }
+
+    public void setOwnerNametxt(JTextField ownerNametxt) {
+        this.ownerNametxt = ownerNametxt;
+    }
+
+    public JPanel getPanelCita() {
+        return PanelCita;
+    }
+
+    public void setPanelCita(JPanel PanelCita) {
+        this.PanelCita = PanelCita;
+    }
+
+    public DateChooser getDateChooser1() {
+        return dateChooser1;
+    }
+
+    public void setDateChooser1(DateChooser dateChooser1) {
+        this.dateChooser1 = dateChooser1;
+    }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ConfirmButton;

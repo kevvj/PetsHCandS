@@ -32,11 +32,12 @@ public class clients {
     public void makeAppointment(){
         appointments app = appointments.getInstance();
         app.setClientName(name);
+        app.setPrice(15000);
         JOptionPane.showMessageDialog(null, app.getClientName());
     }
     
-    public void tryaa(){
+    public void handleShow(){
         appointments app = appointments.getInstance();
-        JOptionPane.showMessageDialog(null, app.getClientName());
+        JOptionPane.showMessageDialog(null, app.getClientName() +"\n" + app.getPetName() +"\n" + app.getDateAppointment()+"\n" + app.getPrice());
     }
 }

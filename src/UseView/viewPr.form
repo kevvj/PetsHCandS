@@ -214,7 +214,7 @@
                               <EmptySpace min="155" pref="155" max="-2" attributes="0"/>
                               <Component id="LabelImg" min="-2" pref="400" max="-2" attributes="0"/>
                               <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                              <Component id="Infotxt" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="155" pref="155" max="-2" attributes="0"/>
@@ -257,7 +257,7 @@
                           <Component id="LabelImg" min="-2" pref="300" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <EmptySpace min="25" pref="25" max="-2" attributes="0"/>
-                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                              <Component id="Infotxt" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
@@ -340,12 +340,12 @@
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="Infotxt">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Show info"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InfotxtActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

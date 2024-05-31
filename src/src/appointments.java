@@ -18,6 +18,7 @@ public class appointments {
         clientName = "";
         petName = "";
         dateAppointment = "";
+        confirmed = false;
     }
     
     public static appointments getInstance(){

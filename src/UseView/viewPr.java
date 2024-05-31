@@ -98,7 +98,7 @@ public class viewPr extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jTextArea1 = new javax.swing.JTextArea();
         jTextArea2 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        Infotxt = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         Cerrar = new javax.swing.JButton();
 
@@ -213,10 +213,10 @@ public class viewPr extends javax.swing.JFrame {
         jTextArea2.setText("Haircut and style of your choice. include, bath brow dry, \nfull body haircut, nail trim, ear cleaning and teeth brushing ");
         jTextArea2.setEnabled(false);
 
-        jButton1.setText("Show info");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Infotxt.setText("Show info");
+        Infotxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                InfotxtActionPerformed(evt);
             }
         });
 
@@ -230,7 +230,7 @@ public class viewPr extends javax.swing.JFrame {
                         .addGap(155, 155, 155)
                         .addComponent(LabelImg, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
-                        .addComponent(jButton1))
+                        .addComponent(Infotxt))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(155, 155, 155)
                         .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -262,7 +262,7 @@ public class viewPr extends javax.swing.JFrame {
                     .addComponent(LabelImg, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(25, 25, 25)
-                        .addComponent(jButton1)))
+                        .addComponent(Infotxt)))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
                 .addGap(7, 7, 7)
@@ -342,10 +342,9 @@ public class viewPr extends javax.swing.JFrame {
 
     }//GEN-LAST:event_CerrarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       clients cli = new clients();
-       cli.tryaa();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void InfotxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfotxtActionPerformed
+       
+    }//GEN-LAST:event_InfotxtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -404,6 +403,14 @@ public class viewPr extends javax.swing.JFrame {
     public void setButtonSpa(JButton ButtonSpa) {
         this.ButtonSpa = ButtonSpa;
     }
+
+    public JButton getInfotxt() {
+        return Infotxt;
+    }
+
+    public void setInfotxt(JButton Infotxt) {
+        this.Infotxt = Infotxt;
+    }
     
     
 
@@ -411,10 +418,10 @@ public class viewPr extends javax.swing.JFrame {
     private javax.swing.JButton ButtonHC;
     private javax.swing.JButton ButtonSpa;
     private javax.swing.JButton Cerrar;
+    private javax.swing.JButton Infotxt;
     private javax.swing.JLabel LabelImg;
     private javax.swing.JLabel LabelImg2;
     private javax.swing.JScrollPane ScrollPane;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
