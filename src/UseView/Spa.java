@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package UseView;
 
 import java.awt.Color;
@@ -12,10 +9,6 @@ import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 
-/**
- *
- * @author Kevin
- */
 public class Spa extends javax.swing.JFrame {
 
    
@@ -23,7 +16,7 @@ public class Spa extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         
-        String rutaImagen = "./img/hc1.jpg";
+        String rutaImagen = "./img/spa1.jpg";
 
         ImageIcon icono = new ImageIcon(getClass().getClassLoader().getResource(rutaImagen));
         int anchoLabel = HClabelimg.getWidth();

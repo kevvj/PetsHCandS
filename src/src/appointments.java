@@ -2,7 +2,6 @@
 package src;
 
 
-
 public class appointments implements Cloneable{
     public int price;
     public String clientName;

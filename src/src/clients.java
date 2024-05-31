@@ -31,6 +31,7 @@ public class clients {
     
     public void makeAppointment(){
         appointments app = appointments.getInstance();
+    
         app.setClientName(name);
     }
     
