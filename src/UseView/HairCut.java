@@ -9,7 +9,9 @@ import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
+import src.clients;
 
 /**
  *
@@ -17,9 +19,7 @@ import javax.swing.JScrollPane;
  */
 public class HairCut extends javax.swing.JFrame {
 
-    /**
-     * Creates new form HairCut
-     */
+    clients cli = new clients();
     public HairCut() {
         initComponents();
         PanelCita.setVisible(false);
@@ -63,7 +63,12 @@ public class HairCut extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         HClabelimg = new javax.swing.JLabel();
+        ownerNametxt = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        idOwner = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         petNamejtf = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -92,8 +97,23 @@ public class HairCut extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        ownerNametxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ownerNametxtActionPerformed(evt);
+            }
+        });
+
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Add pet details");
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel13.setText("ID");
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel9.setText("Name");
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel8.setText("Add personal details");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Pet name");
@@ -181,6 +201,9 @@ public class HairCut extends javax.swing.JFrame {
 
         am11.setPreferredSize(new java.awt.Dimension(78, 22));
         am11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                am11MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 am11MouseEntered(evt);
             }
@@ -196,6 +219,9 @@ public class HairCut extends javax.swing.JFrame {
 
         am12.setPreferredSize(new java.awt.Dimension(78, 22));
         am12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                am12MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 am12MouseEntered(evt);
             }
@@ -211,6 +237,9 @@ public class HairCut extends javax.swing.JFrame {
 
         am1.setPreferredSize(new java.awt.Dimension(78, 0));
         am1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                am1MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 am1MouseEntered(evt);
             }
@@ -231,7 +260,8 @@ public class HairCut extends javax.swing.JFrame {
             }
         });
 
-        FechayHoratxt.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        FechayHoratxt.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        FechayHoratxt.setForeground(new java.awt.Color(0, 204, 204));
 
         javax.swing.GroupLayout PanelCitaLayout = new javax.swing.GroupLayout(PanelCita);
         PanelCita.setLayout(PanelCitaLayout);
@@ -274,9 +304,9 @@ public class HairCut extends javax.swing.JFrame {
                     .addComponent(am10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(19, 19, 19)
                 .addComponent(am1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(FechayHoratxt, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(FechayHoratxt, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
                 .addComponent(ConfirmButton)
                 .addContainerGap())
         );
@@ -285,23 +315,9 @@ public class HairCut extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(petNamejtf)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(136, 136, 136)
-                        .addComponent(SaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(PanelCita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -309,19 +325,47 @@ public class HairCut extends javax.swing.JFrame {
                         .addComponent(HClabelimg, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1))
-                    .addComponent(PanelCita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(124, 124, 124)
+                                .addComponent(SaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(petNamejtf, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ownerNametxt))
+                        .addContainerGap())
+                    .addComponent(idOwner)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(67, 67, 67)
                 .addComponent(HClabelimg, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addGap(38, 38, 38)
+                .addComponent(jLabel8)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ownerNametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(idOwner, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
@@ -333,9 +377,9 @@ public class HairCut extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(SaveButton)
-                .addGap(18, 18, 18)
+                .addGap(34, 34, 34)
                 .addComponent(PanelCita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
         );
 
         jScrollPane1.setViewportView(jPanel1);
@@ -379,16 +423,16 @@ public class HairCut extends javax.swing.JFrame {
 
     private void SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButtonActionPerformed
         PanelCita.setVisible(true);
+        cli.setName(ownerNametxt.getText());
     }//GEN-LAST:event_SaveButtonActionPerformed
 
     private void petNamejtfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_petNamejtfActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_petNamejtfActionPerformed
 
     private void ConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmButtonActionPerformed
-       SelectedDate D = dateChooser1.getSelectedDate();
-        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
-        FechayHoratxt.setText(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
+
+        cli.makeAppointment();
         
     }//GEN-LAST:event_ConfirmButtonActionPerformed
 
@@ -397,7 +441,9 @@ public class HairCut extends javax.swing.JFrame {
     }//GEN-LAST:event_dateChooser1MouseClicked
 
     private void am10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseClicked
-        System.out.println("CALLATE LA BOCA CHAMO");
+        SelectedDate D = dateChooser1.getSelectedDate();
+        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
+        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  10:00 AM" + "</html>");
     }//GEN-LAST:event_am10MouseClicked
 
     private void am10MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseDragged
@@ -436,6 +482,28 @@ public class HairCut extends javax.swing.JFrame {
     private void am1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am1MouseExited
         setCursor(Cursor.getDefaultCursor());
     }//GEN-LAST:event_am1MouseExited
+
+    private void am11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am11MouseClicked
+        SelectedDate D = dateChooser1.getSelectedDate();
+        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
+        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  11:00 AM" + "</html>");
+    }//GEN-LAST:event_am11MouseClicked
+
+    private void am12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am12MouseClicked
+        SelectedDate D = dateChooser1.getSelectedDate();
+        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
+        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  12:00 AM" + "</html>");
+    }//GEN-LAST:event_am12MouseClicked
+
+    private void am1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am1MouseClicked
+        SelectedDate D = dateChooser1.getSelectedDate();
+        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
+        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  01:00 PM" + "</html>");
+    }//GEN-LAST:event_am1MouseClicked
+
+    private void ownerNametxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ownerNametxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ownerNametxtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -491,20 +559,25 @@ public class HairCut extends javax.swing.JFrame {
     private javax.swing.JPanel am11;
     private javax.swing.JPanel am12;
     private com.raven.datechooser.DateChooser dateChooser1;
+    private javax.swing.JTextField idOwner;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField ownerNametxt;
     private javax.swing.JTextField petNamejtf;
     // End of variables declaration//GEN-END:variables
 }

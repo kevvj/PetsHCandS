@@ -1,13 +1,42 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package src;
 
-/**
- *
- * @author Kevin
- */
+import javax.swing.JOptionPane;
+
+
 public class clients {
+    private String name;
+    private String id;
+
+    public clients() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
     
+    
+    
+    public void makeAppointment(){
+        appointments app = appointments.getInstance();
+        app.setClientName(name);
+        JOptionPane.showMessageDialog(null, app.getClientName());
+    }
+    
+    public void tryaa(){
+        appointments app = appointments.getInstance();
+        JOptionPane.showMessageDialog(null, app.getClientName());
+    }
 }

@@ -1,25 +1,45 @@
 
 package src;
 
-import java.math.BigInteger;
 
 
 public class appointments {
-    public BigInteger price;
+    public int price;
     public String clientName;
     public String petName;
     public String dateAppointment;
+    
+    public boolean confirmed;
 
-    public appointments() {
+    private static final appointments instance = new appointments();
+    
+    private appointments() {
+        price = 0;
+        clientName = "";
+        petName = "";
+        dateAppointment = "";
+    }
+    
+    public static appointments getInstance(){
+        return instance;
     }
 
-    public BigInteger getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(BigInteger price) {
+    public void setPrice(int price) {
         this.price = price;
     }
+
+    public boolean isConfirmed() {
+        return confirmed;
+    }
+
+    public void setConfirmed(boolean confirmed) {
+        this.confirmed = confirmed;
+    }
+
 
     public String getClientName() {
         return clientName;
