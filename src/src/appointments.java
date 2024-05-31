@@ -3,7 +3,7 @@ package src;
 
 
 
-public class appointments {
+public class appointments implements Cloneable{
     public int price;
     public String clientName;
     public String petName;
@@ -65,6 +65,12 @@ public class appointments {
     public void setDateAppointment(String dateAppointment) {
         this.dateAppointment = dateAppointment;
     }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+    
     
     
 }

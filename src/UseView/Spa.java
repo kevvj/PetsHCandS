@@ -4,17 +4,38 @@
  */
 package UseView;
 
+import java.awt.Color;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Kevin
  */
 public class Spa extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Spa
-     */
+   
     public Spa() {
         initComponents();
+        setLocationRelativeTo(null);
+        
+        String rutaImagen = "./img/hc1.jpg";
+
+        ImageIcon icono = new ImageIcon(getClass().getClassLoader().getResource(rutaImagen));
+        int anchoLabel = HClabelimg.getWidth();
+        int altoLabel = HClabelimg.getHeight();
+
+        Image imagen = icono.getImage();
+
+        Image imagenAjustada = imagen.getScaledInstance(anchoLabel, altoLabel, Image.SCALE_SMOOTH);
+
+        ImageIcon iconoAjustado = new ImageIcon(imagenAjustada);
+
+        HClabelimg.setIcon(iconoAjustado);
     }
 
     /**
@@ -26,21 +47,107 @@ public class Spa extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanel1 = new javax.swing.JPanel();
+        HClabelimg = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        ownerNametxt = new javax.swing.JTextField();
+        idOwner = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        petNamejtf = new javax.swing.JTextField();
+        SaveButton = new javax.swing.JButton();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(381, 1056));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(HClabelimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 13, 335, 279));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel8.setText("Add personal details");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 310, -1, -1));
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel9.setText("Name");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 353, 175, -1));
+
+        ownerNametxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ownerNametxtActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ownerNametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 380, 350, 31));
+        jPanel1.add(idOwner, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 451, 350, 31));
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel13.setText("ID");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 424, 350, -1));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setText("Add pet details");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 500, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setText("Pet name");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 538, 67, -1));
+
+        petNamejtf.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        petNamejtf.setForeground(new java.awt.Color(153, 153, 153));
+        petNamejtf.setText("name");
+        petNamejtf.setToolTipText("");
+        petNamejtf.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                petNamejtfFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                petNamejtfFocusLost(evt);
+            }
+        });
+        petNamejtf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                petNamejtfActionPerformed(evt);
+            }
+        });
+        jPanel1.add(petNamejtf, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 565, 350, 31));
+
+        SaveButton.setText("Save");
+        jPanel1.add(SaveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 640, -1, -1));
+
+        jScrollPane1.setViewportView(jPanel1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void petNamejtfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_petNamejtfActionPerformed
+
+    }//GEN-LAST:event_petNamejtfActionPerformed
+
+    private void petNamejtfFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_petNamejtfFocusLost
+        if (petNamejtf.getText().equals(""))
+        {
+            petNamejtf.setText("name");
+            petNamejtf.setForeground(new Color(153, 153, 153));
+        }
+    }//GEN-LAST:event_petNamejtfFocusLost
+
+    private void petNamejtfFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_petNamejtfFocusGained
+        if (petNamejtf.getText().equals("name"))
+        {
+            petNamejtf.setText("");
+            petNamejtf.setForeground(new Color(0, 0, 0));
+        };
+    }//GEN-LAST:event_petNamejtfFocusGained
+
+    private void ownerNametxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ownerNametxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ownerNametxtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -84,6 +191,70 @@ public class Spa extends javax.swing.JFrame {
         });
     }
 
+    public JLabel getHClabelimg() {
+        return HClabelimg;
+    }
+
+    public void setHClabelimg(JLabel HClabelimg) {
+        this.HClabelimg = HClabelimg;
+    }
+
+    public JTextField getIdOwner() {
+        return idOwner;
+    }
+
+    public void setIdOwner(JTextField idOwner) {
+        this.idOwner = idOwner;
+    }
+
+    public JButton getSaveButton() {
+        return SaveButton;
+    }
+
+    public void setSaveButton(JButton SaveButton) {
+        this.SaveButton = SaveButton;
+    }
+
+    
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JTextField getOwnerNametxt() {
+        return ownerNametxt;
+    }
+
+    public void setOwnerNametxt(JTextField ownerNametxt) {
+        this.ownerNametxt = ownerNametxt;
+    }
+
+    public JTextField getPetNamejtf() {
+        return petNamejtf;
+    }
+
+    public void setPetNamejtf(JTextField petNamejtf) {
+        this.petNamejtf = petNamejtf;
+    }
+    
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel HClabelimg;
+    private javax.swing.JButton SaveButton;
+    private javax.swing.JTextField idOwner;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField ownerNametxt;
+    private javax.swing.JTextField petNamejtf;
     // End of variables declaration//GEN-END:variables
 }

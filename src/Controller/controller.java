@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 
 import UseView.*;
 import com.raven.datechooser.SelectedDate;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import src.appointments;
 import src.clients;
@@ -39,7 +41,6 @@ public class controller implements ActionListener {
 
     public void HandleHC() {
         HC.setResizable(false);
-
         HC.setTitle("Hair Cut");
         HC.setVisible(true);
 
@@ -47,7 +48,6 @@ public class controller implements ActionListener {
 
     public void HandleSpa() {
         spa.setResizable(false);
-
         spa.setTitle("Spa");
         spa.setVisible(true);
 
@@ -58,11 +58,40 @@ public class controller implements ActionListener {
         if (e.getSource() == vpr.getButtonHC())
         {
             HandleHC();
+            HC.getIdOwner().setText("");
+            HC.getOwnerNametxt().setText("");
+            HC.getPetNamejtf().setText("");
+            HC.getDetailstxt().setText("");
+            try
+            {
+                appointments cloneapp = (appointments) app.clone();
+                HC.getOwnerNametxt().setText(cloneapp.getClientName());
+                HC.getPetNamejtf().setText(cloneapp.getPetName());
+            } catch (CloneNotSupportedException ex)
+            {
+                Logger.getLogger(controller.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            
+            
+            
         }
 
         if (e.getSource() == vpr.getButtonSpa())
         {
             HandleSpa();
+            spa.getIdOwner().setText("");
+            spa.getOwnerNametxt().setText("");
+            spa.getPetNamejtf().setText("");
+            try
+            {
+                appointments cloneapp = (appointments) app.clone();
+                spa.getOwnerNametxt().setText(cloneapp.getClientName());
+                spa.getPetNamejtf().setText(cloneapp.getPetName());
+            } catch (CloneNotSupportedException ex)
+            {
+                Logger.getLogger(controller.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
 
         if (e.getSource() == vpr.getInfotxt())
@@ -76,19 +105,17 @@ public class controller implements ActionListener {
         if (e.getSource() == HC.getSaveButton())
         {
             cli.setName(HC.getOwnerNametxt().getText());
+            app.setPetName(HC.getPetNamejtf().getText());
+            app.setConfirmed(true);
+            app.setPrice(399);
             HC.getPanelCita().setVisible(true);
-            JOptionPane.showMessageDialog(null, "a");
         }
 
         if (e.getSource() == HC.getConfirmButton())
         {
-            app.setPetName(HC.getPetNamejtf().getText());
-            app.setConfirmed(true);
-            app.setPrice(399);
             
             SelectedDate D = HC.getDateChooser1().getSelectedDate();
             app.setDateAppointment(D.getDay() + "/" + D.getMonth() + "/" + D.getYear());
-            
             cli.makeAppointment();
  
         }

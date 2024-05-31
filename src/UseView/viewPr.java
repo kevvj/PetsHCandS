@@ -276,7 +276,8 @@ public class viewPr extends javax.swing.JFrame {
                 .addGap(7, 7, 7)
                 .addComponent(jTextArea2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
-                .addComponent(ButtonSpa))
+                .addComponent(ButtonSpa)
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         ScrollPane.setViewportView(jPanel3);

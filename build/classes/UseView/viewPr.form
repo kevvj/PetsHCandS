@@ -274,6 +274,7 @@
                       <Component id="jTextArea2" min="-2" pref="64" max="-2" attributes="0"/>
                       <EmptySpace min="43" pref="43" max="-2" attributes="0"/>
                       <Component id="ButtonSpa" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="46" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
