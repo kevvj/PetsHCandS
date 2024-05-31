@@ -14,6 +14,7 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import src.clients;
 
@@ -590,6 +591,30 @@ public class HairCut extends javax.swing.JFrame {
 
     public void setDateChooser1(DateChooser dateChooser1) {
         this.dateChooser1 = dateChooser1;
+    }
+
+    public JTextArea getDetailstxt() {
+        return Detailstxt;
+    }
+
+    public void setDetailstxt(JTextArea Detailstxt) {
+        this.Detailstxt = Detailstxt;
+    }
+
+    public JTextField getIdOwner() {
+        return idOwner;
+    }
+
+    public void setIdOwner(JTextField idOwner) {
+        this.idOwner = idOwner;
+    }
+
+    public JTextField getPetNamejtf() {
+        return petNamejtf;
+    }
+
+    public void setPetNamejtf(JTextField petNamejtf) {
+        this.petNamejtf = petNamejtf;
     }
     
     

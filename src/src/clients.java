@@ -32,7 +32,6 @@ public class clients {
     public void makeAppointment(){
         appointments app = appointments.getInstance();
         app.setClientName(name);
-        app.setPrice(15000);
         JOptionPane.showMessageDialog(null, app.getClientName());
     }
     
