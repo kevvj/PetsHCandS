@@ -117,6 +117,7 @@ public class controller implements ActionListener {
             SelectedDate D = HC.getDateChooser1().getSelectedDate();
             app.setDateAppointment(D.getDay() + "/" + D.getMonth() + "/" + D.getYear());
             cli.makeAppointment();
+            JOptionPane.showMessageDialog(null, "cita confirmada");
  
         }
     }
