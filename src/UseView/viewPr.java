@@ -9,6 +9,7 @@ import java.awt.Cursor;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import src.*;
 
@@ -94,11 +95,11 @@ public class viewPr extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
+        RedesButton = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jPanel8 = new javax.swing.JPanel();
+        UsuarioButton = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jPanel9 = new javax.swing.JPanel();
+        AcercadeButton = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         Cerrar = new javax.swing.JButton();
@@ -106,7 +107,7 @@ public class viewPr extends javax.swing.JFrame {
         RedesPanel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         UsuarioPanel = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        UsuarioLabel = new javax.swing.JLabel();
         AcercaDePanel = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         ScrollPane = new javax.swing.JScrollPane();
@@ -151,68 +152,68 @@ public class viewPr extends javax.swing.JFrame {
 
         jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 150, 40));
 
-        jPanel6.setBackground(new java.awt.Color(91, 196, 175));
-        jPanel6.addMouseListener(new java.awt.event.MouseAdapter() {
+        RedesButton.setBackground(new java.awt.Color(91, 196, 175));
+        RedesButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel6MouseClicked(evt);
+                RedesButtonMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jPanel6MouseEntered(evt);
+                RedesButtonMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jPanel6MouseExited(evt);
+                RedesButtonMouseExited(evt);
             }
         });
-        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        RedesButton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(204, 255, 204));
         jLabel5.setText("Redes ");
-        jPanel6.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+        RedesButton.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
-        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 150, 40));
+        jPanel2.add(RedesButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 150, 40));
 
-        jPanel8.setBackground(new java.awt.Color(91, 196, 175));
-        jPanel8.addMouseListener(new java.awt.event.MouseAdapter() {
+        UsuarioButton.setBackground(new java.awt.Color(91, 196, 175));
+        UsuarioButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel8MouseClicked(evt);
+                UsuarioButtonMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jPanel8MouseEntered(evt);
+                UsuarioButtonMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jPanel8MouseExited(evt);
+                UsuarioButtonMouseExited(evt);
             }
         });
-        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        UsuarioButton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(204, 255, 204));
         jLabel7.setText("Usuario");
-        jPanel8.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+        UsuarioButton.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
-        jPanel2.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 150, 40));
+        jPanel2.add(UsuarioButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 150, 40));
 
-        jPanel9.setBackground(new java.awt.Color(91, 196, 175));
-        jPanel9.addMouseListener(new java.awt.event.MouseAdapter() {
+        AcercadeButton.setBackground(new java.awt.Color(91, 196, 175));
+        AcercadeButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel9MouseClicked(evt);
+                AcercadeButtonMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jPanel9MouseEntered(evt);
+                AcercadeButtonMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jPanel9MouseExited(evt);
+                AcercadeButtonMouseExited(evt);
             }
         });
-        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        AcercadeButton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(204, 255, 204));
         jLabel8.setText("Acerca de ");
-        jPanel9.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+        AcercadeButton.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
-        jPanel2.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 150, 40));
+        jPanel2.add(AcercadeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 150, 40));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 58, 190, 620));
 
@@ -257,8 +258,8 @@ public class viewPr extends javax.swing.JFrame {
 
         UsuarioPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel6.setText("Seccion de usuarios*");
+        UsuarioLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        UsuarioLabel.setText("Seccion de usuarios*");
 
         javax.swing.GroupLayout UsuarioPanelLayout = new javax.swing.GroupLayout(UsuarioPanel);
         UsuarioPanel.setLayout(UsuarioPanelLayout);
@@ -266,14 +267,14 @@ public class viewPr extends javax.swing.JFrame {
             UsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UsuarioPanelLayout.createSequentialGroup()
                 .addContainerGap(461, Short.MAX_VALUE)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(UsuarioLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(255, 255, 255))
         );
         UsuarioPanelLayout.setVerticalGroup(
             UsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(UsuarioPanelLayout.createSequentialGroup()
                 .addGap(224, 224, 224)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(UsuarioLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(368, Short.MAX_VALUE))
         );
 
@@ -402,29 +403,29 @@ public class viewPr extends javax.swing.JFrame {
         setCursor(new Cursor(Cursor.HAND_CURSOR));
     }//GEN-LAST:event_jPanel5MouseEntered
 
-    private void jPanel6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseEntered
+    private void RedesButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RedesButtonMouseEntered
         setCursor(new Cursor(Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_jPanel6MouseEntered
+    }//GEN-LAST:event_RedesButtonMouseEntered
 
-    private void jPanel8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseEntered
+    private void UsuarioButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UsuarioButtonMouseEntered
         setCursor(new Cursor(Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_jPanel8MouseEntered
+    }//GEN-LAST:event_UsuarioButtonMouseEntered
 
-    private void jPanel9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MouseEntered
+    private void AcercadeButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AcercadeButtonMouseEntered
         setCursor(new Cursor(Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_jPanel9MouseEntered
+    }//GEN-LAST:event_AcercadeButtonMouseEntered
 
     private void jPanel5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseExited
         setCursor(new Cursor(Cursor.DEFAULT_CURSOR));    }//GEN-LAST:event_jPanel5MouseExited
 
-    private void jPanel6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseExited
-        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));    }//GEN-LAST:event_jPanel6MouseExited
+    private void RedesButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RedesButtonMouseExited
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));    }//GEN-LAST:event_RedesButtonMouseExited
 
-    private void jPanel8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseExited
-        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));    }//GEN-LAST:event_jPanel8MouseExited
+    private void UsuarioButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UsuarioButtonMouseExited
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));    }//GEN-LAST:event_UsuarioButtonMouseExited
 
-    private void jPanel9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MouseExited
-        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));    }//GEN-LAST:event_jPanel9MouseExited
+    private void AcercadeButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AcercadeButtonMouseExited
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));    }//GEN-LAST:event_AcercadeButtonMouseExited
 
     private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
         RedesPanel.setVisible(false);
@@ -432,23 +433,24 @@ public class viewPr extends javax.swing.JFrame {
         AcercaDePanel.setVisible(false);
     }//GEN-LAST:event_jPanel5MouseClicked
 
-    private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
+    private void RedesButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RedesButtonMouseClicked
         RedesPanel.setVisible(true);
         UsuarioPanel.setVisible(false);
         AcercaDePanel.setVisible(false);
-    }//GEN-LAST:event_jPanel6MouseClicked
+    }//GEN-LAST:event_RedesButtonMouseClicked
 
-    private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
+    private void UsuarioButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UsuarioButtonMouseClicked
         RedesPanel.setVisible(false);
         UsuarioPanel.setVisible(true);
         AcercaDePanel.setVisible(false);
-    }//GEN-LAST:event_jPanel8MouseClicked
+        UsuarioLabel.setText("");
+    }//GEN-LAST:event_UsuarioButtonMouseClicked
 
-    private void jPanel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MouseClicked
+    private void AcercadeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AcercadeButtonMouseClicked
         RedesPanel.setVisible(false);
         UsuarioPanel.setVisible(false);
         AcercaDePanel.setVisible(true);
-    }//GEN-LAST:event_jPanel9MouseClicked
+    }//GEN-LAST:event_AcercadeButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -516,10 +518,77 @@ public class viewPr extends javax.swing.JFrame {
         this.Infotxt = Infotxt;
     }
 
+    public JPanel getAcercaDePanel() {
+        return AcercaDePanel;
+    }
+
+    public void setAcercaDePanel(JPanel AcercaDePanel) {
+        this.AcercaDePanel = AcercaDePanel;
+    }
+
+    public JPanel getAcercaDePanel1() {
+        return AcercaDePanel1;
+    }
+
+    public void setAcercaDePanel1(JPanel AcercaDePanel1) {
+        this.AcercaDePanel1 = AcercaDePanel1;
+    }
+
+    public JPanel getAcercadeButton() {
+        return AcercadeButton;
+    }
+
+    public void setAcercadeButton(JPanel AcercadeButton) {
+        this.AcercadeButton = AcercadeButton;
+    }
+
+    public JButton getCerrar() {
+        return Cerrar;
+    }
+
+    public void setCerrar(JButton Cerrar) {
+        this.Cerrar = Cerrar;
+    }
+
+    public JPanel getRedesButton() {
+        return RedesButton;
+    }
+
+    public void setRedesButton(JPanel RedesButton) {
+        this.RedesButton = RedesButton;
+    }
+
+    public JPanel getRedesPanel() {
+        return RedesPanel;
+    }
+
+    public void setRedesPanel(JPanel RedesPanel) {
+        this.RedesPanel = RedesPanel;
+    }
+
+    public JPanel getUsuarioButton() {
+        return UsuarioButton;
+    }
+
+    public void setUsuarioButton(JPanel UsuarioButton) {
+        this.UsuarioButton = UsuarioButton;
+    }
+
+    public JPanel getUsuarioPanel() {
+        return UsuarioPanel;
+    }
+
+    public void setUsuarioPanel(JPanel UsuarioPanel) {
+        this.UsuarioPanel = UsuarioPanel;
+    }
+    
+    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AcercaDePanel;
     private javax.swing.JPanel AcercaDePanel1;
+    private javax.swing.JPanel AcercadeButton;
     private javax.swing.JButton ButtonHC;
     private javax.swing.JButton ButtonSpa;
     private javax.swing.JButton Cerrar;
@@ -527,15 +596,17 @@ public class viewPr extends javax.swing.JFrame {
     private javax.swing.JLabel LabelImg;
     private javax.swing.JLabel LabelImg2;
     private javax.swing.JLabel Logo;
+    private javax.swing.JPanel RedesButton;
     private javax.swing.JPanel RedesPanel;
     private javax.swing.JScrollPane ScrollPane;
+    private javax.swing.JPanel UsuarioButton;
+    private javax.swing.JLabel UsuarioLabel;
     private javax.swing.JPanel UsuarioPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -543,9 +614,6 @@ public class viewPr extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables

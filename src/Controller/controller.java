@@ -28,6 +28,8 @@ public class controller implements ActionListener {
         vpr.getButtonHC().addActionListener(this);
         vpr.getButtonSpa().addActionListener(this);
         vpr.getInfotxt().addActionListener(this);
+        
+        
         HC.getConfirmButton().addActionListener(this);
         HC.getSaveButton().addActionListener(this);
 

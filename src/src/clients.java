@@ -35,8 +35,12 @@ public class clients {
         app.setClientName(name);
     }
     
-    public void handleShow(){
+    public String handleShow(){
         appointments app = appointments.getInstance();
-        JOptionPane.showMessageDialog(null, app.getClientName() +"\n" + app.getPetName() +"\n" + app.getDateAppointment()+"\n" + app.getPrice());
+        
+        String t = app.getClientName() +"\n" + app.getPetName() +"\n" + app.getDateAppointment()+"\n" + app.getPrice();
+        JOptionPane.showMessageDialog(null, t);
+        
+        return t;
     }
 }
