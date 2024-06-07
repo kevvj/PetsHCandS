@@ -26,10 +26,14 @@ public class viewPr extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         String rutaImagen1 = "./img/a1.jpg";
         String rutaImagen2 = "./img/a2.jpg";
+        
+        String rutaLogo = "./img/logo.png";
 
         // Cargar la imagen desde el archivo
         ImageIcon icono = new ImageIcon(getClass().getClassLoader().getResource(rutaImagen1));
         ImageIcon icono2 = new ImageIcon(getClass().getClassLoader().getResource(rutaImagen2));
+        
+        ImageIcon icono3 = new ImageIcon(getClass().getClassLoader().getResource(rutaLogo));
 
         // Obtener el tamaño del JLabel
         int anchoLabel = LabelImg.getWidth();
@@ -37,22 +41,29 @@ public class viewPr extends javax.swing.JFrame {
         
         int anchoLabe2 = LabelImg2.getWidth();
         int altoLabel2 = LabelImg2.getHeight();
+        
+        int anchoLabe3 = Logo.getWidth();
+        int altoLabel3 = Logo.getHeight();
 
         // Obtener la imagen del icono
         Image imagen = icono.getImage();
         Image imagen2 = icono2.getImage();
+        Image imagen3 = icono3.getImage();
 
         // Ajustar el tamaño de la imagen para que se ajuste al JLabel
         Image imagenAjustada = imagen.getScaledInstance(anchoLabel, altoLabel, Image.SCALE_SMOOTH);
         Image imagenAjustada2 = imagen2.getScaledInstance(anchoLabe2, altoLabel2, Image.SCALE_SMOOTH);
+        Image imagenAjustada3 = imagen3.getScaledInstance(anchoLabe3, altoLabel3, Image.SCALE_SMOOTH);
 
         // Crear un nuevo ImageIcon con la imagen ajustada
         ImageIcon iconoAjustado = new ImageIcon(imagenAjustada);
         ImageIcon iconoAjustado2 = new ImageIcon(imagenAjustada2);
+        ImageIcon iconoAjustado3 = new ImageIcon(imagenAjustada3);
 
         // Establecer el nuevo ImageIcon en el JLabel
         LabelImg.setIcon(iconoAjustado);
         LabelImg2.setIcon(iconoAjustado2);
+        Logo.setIcon(iconoAjustado3);
         
         ButtonHC.setUI(new RoundedButtonUI(new Color(100, 180, 255), Color.BLACK));
         ButtonSpa.setUI(new RoundedButtonUI(new Color(100, 180, 255), Color.BLACK));
@@ -91,6 +102,7 @@ public class viewPr extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         Cerrar = new javax.swing.JButton();
+        Logo = new javax.swing.JLabel();
         RedesPanel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         UsuarioPanel = new javax.swing.JPanel();
@@ -108,6 +120,7 @@ public class viewPr extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jTextArea2 = new javax.swing.JTextArea();
         Infotxt = new javax.swing.JButton();
+        AcercaDePanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -201,9 +214,10 @@ public class viewPr extends javax.swing.JFrame {
 
         jPanel2.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 150, 40));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 38, 201, 640));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 58, 190, 620));
 
-        jPanel4.setBackground(new java.awt.Color(91, 196, 175));
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Cerrar.setText("X");
@@ -212,9 +226,10 @@ public class viewPr extends javax.swing.JFrame {
                 CerrarActionPerformed(evt);
             }
         });
-        jPanel4.add(Cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 0, 43, 17));
+        jPanel4.add(Cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 10, 43, 17));
+        jPanel4.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 140, 40));
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 918, 32));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 918, 50));
 
         RedesPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -288,6 +303,8 @@ public class viewPr extends javax.swing.JFrame {
 
         getContentPane().add(AcercaDePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 920, 640));
 
+        ScrollPane.setBorder(null);
+
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -297,15 +314,15 @@ public class viewPr extends javax.swing.JFrame {
                 ButtonHCActionPerformed(evt);
             }
         });
-        jPanel3.add(ButtonHC, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 480, -1, -1));
+        jPanel3.add(ButtonHC, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 500, -1, -1));
 
         LabelImg.setToolTipText("");
-        jPanel3.add(LabelImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 42, 400, 300));
-        jPanel3.add(LabelImg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 546, 400, 300));
+        jPanel3.add(LabelImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 32, 400, 340));
+        jPanel3.add(LabelImg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 560, 400, 330));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Corte de pelo");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 360, 157, -1));
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 157, -1));
 
         ButtonSpa.setText("Solicita ahora");
         ButtonSpa.addActionListener(new java.awt.event.ActionListener() {
@@ -313,25 +330,25 @@ public class viewPr extends javax.swing.JFrame {
                 ButtonSpaActionPerformed(evt);
             }
         });
-        jPanel3.add(ButtonSpa, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 1041, -1, -1));
+        jPanel3.add(ButtonSpa, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 1060, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setText("Fabuloso Spa para mascotas");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 902, -1, -1));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 920, -1, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextArea1.setRows(5);
         jTextArea1.setText("Corte de pelo con estilo a tu eleccion, incluyendo, baño, \ncorte de pelo cuerpo completo, corte de uñas, limpieza de\noidos, y cepillado de dientes");
         jTextArea1.setEnabled(false);
-        jPanel3.add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 392, 381, 59));
+        jPanel3.add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 420, 381, 59));
 
         jTextArea2.setColumns(20);
         jTextArea2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextArea2.setRows(5);
         jTextArea2.setText("Bienvenido a Paws & Relax Spa, el refugio perfecto para \nconsentir a tus amadas mascotas. Nuestro spa se especializa\n en ofrecer una experiencia de lujo y relajación tanto para \nperros como para gatos, garantizando que cada visita sea\n un momento inolvidable y placentero para ellos.");
         jTextArea2.setEnabled(false);
-        jPanel3.add(jTextArea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 934, -1, 64));
+        jPanel3.add(jTextArea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 950, -1, 64));
 
         Infotxt.setText("Info");
         Infotxt.addActionListener(new java.awt.event.ActionListener() {
@@ -343,7 +360,22 @@ public class viewPr extends javax.swing.JFrame {
 
         ScrollPane.setViewportView(jPanel3);
 
-        getContentPane().add(ScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 38, 720, 640));
+        getContentPane().add(ScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 58, 720, 620));
+
+        AcercaDePanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout AcercaDePanel1Layout = new javax.swing.GroupLayout(AcercaDePanel1);
+        AcercaDePanel1.setLayout(AcercaDePanel1Layout);
+        AcercaDePanel1Layout.setHorizontalGroup(
+            AcercaDePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 920, Short.MAX_VALUE)
+        );
+        AcercaDePanel1Layout.setVerticalGroup(
+            AcercaDePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 640, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(AcercaDePanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 920, 640));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -487,12 +519,14 @@ public class viewPr extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AcercaDePanel;
+    private javax.swing.JPanel AcercaDePanel1;
     private javax.swing.JButton ButtonHC;
     private javax.swing.JButton ButtonSpa;
     private javax.swing.JButton Cerrar;
     private javax.swing.JButton Infotxt;
     private javax.swing.JLabel LabelImg;
     private javax.swing.JLabel LabelImg2;
+    private javax.swing.JLabel Logo;
     private javax.swing.JPanel RedesPanel;
     private javax.swing.JScrollPane ScrollPane;
     private javax.swing.JPanel UsuarioPanel;

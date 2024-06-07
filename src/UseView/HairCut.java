@@ -111,7 +111,7 @@ public class HairCut extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("Add pet details");
+        jLabel1.setText("Agregar informacion de la mascota");
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel13.setText("ID");
@@ -120,7 +120,7 @@ public class HairCut extends javax.swing.JFrame {
         jLabel9.setText("Name");
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel8.setText("Add personal details");
+        jLabel8.setText("Agregar informacion personal");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Pet name");
@@ -144,12 +144,12 @@ public class HairCut extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setText("Age, gender");
+        jLabel3.setText("Edad, genero");
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel14.setText("Bleed:");
+        jLabel14.setText("Raza:");
 
-        SaveButton.setText("Save");
+        SaveButton.setText("Guardar");
         SaveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SaveButtonActionPerformed(evt);
@@ -174,10 +174,10 @@ public class HairCut extends javax.swing.JFrame {
         PanelCita.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel5.setText("Date");
+        jLabel5.setText("Fecha");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel6.setText("Time");
+        jLabel6.setText("Hora");
 
         dateChooser1.setForeground(new java.awt.Color(204, 0, 255));
         dateChooser1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -263,7 +263,7 @@ public class HairCut extends javax.swing.JFrame {
         jLabel12.setText("01:00 PM");
         am1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 30));
 
-        ConfirmButton.setText("Confirm");
+        ConfirmButton.setText("Confirmar");
         ConfirmButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ConfirmButtonActionPerformed(evt);
@@ -278,25 +278,25 @@ public class HairCut extends javax.swing.JFrame {
         PanelCitaLayout.setHorizontalGroup(
             PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelCitaLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelCitaLayout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(ConfirmButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(am1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel6)
-                        .addComponent(jLabel5)
-                        .addGroup(PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(dateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelCitaLayout.createSequentialGroup()
-                                .addComponent(am10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(am11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(21, 21, 21)
-                                .addComponent(am12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addComponent(FechayHoratxt, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(12, 12, 12)
+                        .addGroup(PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(am1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel5)
+                            .addGroup(PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(dateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelCitaLayout.createSequentialGroup()
+                                    .addComponent(am10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(am11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(21, 21, 21)
+                                    .addComponent(am12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(FechayHoratxt, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(PanelCitaLayout.createSequentialGroup()
+                        .addGap(106, 106, 106)
+                        .addComponent(ConfirmButton)))
                 .addContainerGap(74, Short.MAX_VALUE))
         );
         PanelCitaLayout.setVerticalGroup(
@@ -329,24 +329,24 @@ public class HairCut extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 17, Short.MAX_VALUE)
                 .addComponent(PanelCita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(idOwner)
                             .addComponent(ownerNametxt, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane2)
+                            .addComponent(petNamejtf)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel1))
-                                .addGap(223, 223, 223))
-                            .addComponent(jScrollPane2)
-                            .addComponent(petNamejtf))
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addContainerGap())))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -414,21 +414,74 @@ public class HairCut extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void petNamejtfFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_petNamejtfFocusGained
-        if (petNamejtf.getText().equals("name"))
-        {
-            petNamejtf.setText("");
-            petNamejtf.setForeground(new Color(0, 0, 0));
-        };
-    }//GEN-LAST:event_petNamejtfFocusGained
+    private void ConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmButtonActionPerformed
 
-    private void petNamejtfFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_petNamejtfFocusLost
-        if (petNamejtf.getText().equals(""))
-        {
-            petNamejtf.setText("name");
-            petNamejtf.setForeground(new Color(153, 153, 153));
-        }
-    }//GEN-LAST:event_petNamejtfFocusLost
+    }//GEN-LAST:event_ConfirmButtonActionPerformed
+
+    private void am1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am1MouseExited
+        setCursor(Cursor.getDefaultCursor());
+    }//GEN-LAST:event_am1MouseExited
+
+    private void am1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am1MouseEntered
+        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_am1MouseEntered
+
+    private void am1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am1MouseClicked
+        SelectedDate D = dateChooser1.getSelectedDate();
+        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
+        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  01:00 PM" + "</html>");
+    }//GEN-LAST:event_am1MouseClicked
+
+    private void am12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am12MouseExited
+        setCursor(Cursor.getDefaultCursor());
+    }//GEN-LAST:event_am12MouseExited
+
+    private void am12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am12MouseEntered
+        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_am12MouseEntered
+
+    private void am12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am12MouseClicked
+        SelectedDate D = dateChooser1.getSelectedDate();
+        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
+        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  12:00 AM" + "</html>");
+    }//GEN-LAST:event_am12MouseClicked
+
+    private void am11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am11MouseExited
+        setCursor(Cursor.getDefaultCursor());
+    }//GEN-LAST:event_am11MouseExited
+
+    private void am11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am11MouseEntered
+        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_am11MouseEntered
+
+    private void am11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am11MouseClicked
+        SelectedDate D = dateChooser1.getSelectedDate();
+        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
+        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  11:00 AM" + "</html>");
+    }//GEN-LAST:event_am11MouseClicked
+
+    private void am10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseExited
+        setCursor(Cursor.getDefaultCursor());
+    }//GEN-LAST:event_am10MouseExited
+
+    private void am10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseEntered
+
+        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_am10MouseEntered
+
+    private void am10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseClicked
+        SelectedDate D = dateChooser1.getSelectedDate();
+        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
+        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  10:00 AM" + "</html>");
+    }//GEN-LAST:event_am10MouseClicked
+
+    private void am10MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseDragged
+
+    }//GEN-LAST:event_am10MouseDragged
+
+    private void dateChooser1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dateChooser1MouseClicked
+
+    }//GEN-LAST:event_dateChooser1MouseClicked
 
     private void DetailstxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DetailstxtFocusLost
         if (Detailstxt.getText().equals(""))
@@ -447,84 +500,28 @@ public class HairCut extends javax.swing.JFrame {
     }//GEN-LAST:event_DetailstxtFocusGained
 
     private void SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButtonActionPerformed
-        
-        
+
     }//GEN-LAST:event_SaveButtonActionPerformed
 
     private void petNamejtfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_petNamejtfActionPerformed
-        
+
     }//GEN-LAST:event_petNamejtfActionPerformed
 
-    private void ConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmButtonActionPerformed
+    private void petNamejtfFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_petNamejtfFocusLost
+        if (petNamejtf.getText().equals(""))
+        {
+            petNamejtf.setText("name");
+            petNamejtf.setForeground(new Color(153, 153, 153));
+        }
+    }//GEN-LAST:event_petNamejtfFocusLost
 
-        
-        
-    }//GEN-LAST:event_ConfirmButtonActionPerformed
-
-    private void dateChooser1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dateChooser1MouseClicked
-        
-    }//GEN-LAST:event_dateChooser1MouseClicked
-
-    private void am10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseClicked
-        SelectedDate D = dateChooser1.getSelectedDate();
-        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
-        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  10:00 AM" + "</html>");
-    }//GEN-LAST:event_am10MouseClicked
-
-    private void am10MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseDragged
-        
-    }//GEN-LAST:event_am10MouseDragged
-
-    private void am10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseEntered
-        
-        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_am10MouseEntered
-
-    private void am10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseExited
-        setCursor(Cursor.getDefaultCursor());
-    }//GEN-LAST:event_am10MouseExited
-
-    private void am11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am11MouseEntered
-        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_am11MouseEntered
-
-    private void am11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am11MouseExited
-        setCursor(Cursor.getDefaultCursor());
-    }//GEN-LAST:event_am11MouseExited
-
-    private void am12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am12MouseEntered
-        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_am12MouseEntered
-
-    private void am12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am12MouseExited
-       setCursor(Cursor.getDefaultCursor());
-    }//GEN-LAST:event_am12MouseExited
-
-    private void am1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am1MouseEntered
-        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_am1MouseEntered
-
-    private void am1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am1MouseExited
-        setCursor(Cursor.getDefaultCursor());
-    }//GEN-LAST:event_am1MouseExited
-
-    private void am11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am11MouseClicked
-        SelectedDate D = dateChooser1.getSelectedDate();
-        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
-        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  11:00 AM" + "</html>");
-    }//GEN-LAST:event_am11MouseClicked
-
-    private void am12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am12MouseClicked
-        SelectedDate D = dateChooser1.getSelectedDate();
-        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
-        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  12:00 AM" + "</html>");
-    }//GEN-LAST:event_am12MouseClicked
-
-    private void am1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am1MouseClicked
-        SelectedDate D = dateChooser1.getSelectedDate();
-        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
-        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  01:00 PM" + "</html>");
-    }//GEN-LAST:event_am1MouseClicked
+    private void petNamejtfFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_petNamejtfFocusGained
+        if (petNamejtf.getText().equals("name"))
+        {
+            petNamejtf.setText("");
+            petNamejtf.setForeground(new Color(0, 0, 0));
+        };
+    }//GEN-LAST:event_petNamejtfFocusGained
 
     private void ownerNametxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ownerNametxtActionPerformed
         // TODO add your handling code here:
