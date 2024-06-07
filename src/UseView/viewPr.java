@@ -9,6 +9,7 @@ import java.awt.Cursor;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import src.*;
@@ -19,30 +20,28 @@ import src.*;
  */
 public class viewPr extends javax.swing.JFrame {
 
-    /**
-     * Creates new form viewPr
-     */
+
     public viewPr() {
         initComponents();
         setLocationRelativeTo(null);
         String rutaImagen1 = "./img/a1.jpg";
         String rutaImagen2 = "./img/a2.jpg";
-        
+
         String rutaLogo = "./img/logo.png";
 
         // Cargar la imagen desde el archivo
         ImageIcon icono = new ImageIcon(getClass().getClassLoader().getResource(rutaImagen1));
         ImageIcon icono2 = new ImageIcon(getClass().getClassLoader().getResource(rutaImagen2));
-        
+
         ImageIcon icono3 = new ImageIcon(getClass().getClassLoader().getResource(rutaLogo));
 
         // Obtener el tamaño del JLabel
         int anchoLabel = LabelImg.getWidth();
         int altoLabel = LabelImg.getHeight();
-        
+
         int anchoLabe2 = LabelImg2.getWidth();
         int altoLabel2 = LabelImg2.getHeight();
-        
+
         int anchoLabe3 = Logo.getWidth();
         int altoLabel3 = Logo.getHeight();
 
@@ -65,17 +64,17 @@ public class viewPr extends javax.swing.JFrame {
         LabelImg.setIcon(iconoAjustado);
         LabelImg2.setIcon(iconoAjustado2);
         Logo.setIcon(iconoAjustado3);
-        
+
         ButtonHC.setUI(new RoundedButtonUI(new Color(100, 180, 255), Color.BLACK));
         ButtonSpa.setUI(new RoundedButtonUI(new Color(100, 180, 255), Color.BLACK));
-        
+
         ButtonHC.setBounds(50, 50, 200, 50);
         ButtonSpa.setBounds(50, 50, 200, 50);
         ScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         ScrollPane.getVerticalScrollBar().setUI(new CustomScrollBarUI());
-        
+
         Cerrar.setUI(new RoundedButtonUI(new Color(182, 184, 214), Color.BLACK));
-        
+
         jTextArea1.setDisabledTextColor(Color.BLACK);
         jTextArea2.setDisabledTextColor(Color.BLACK);
         RedesPanel.setVisible(false);
@@ -101,9 +100,9 @@ public class viewPr extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         AcercadeButton = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
+        Logo = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         Cerrar = new javax.swing.JButton();
-        Logo = new javax.swing.JLabel();
         RedesPanel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         UsuarioPanel = new javax.swing.JPanel();
@@ -120,18 +119,18 @@ public class viewPr extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jTextArea1 = new javax.swing.JTextArea();
         jTextArea2 = new javax.swing.JTextArea();
-        Infotxt = new javax.swing.JButton();
         AcercaDePanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(91, 196, 175));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel5.setBackground(new java.awt.Color(91, 196, 175));
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
         jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel5MouseClicked(evt);
@@ -145,14 +144,14 @@ public class viewPr extends javax.swing.JFrame {
         });
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(204, 255, 204));
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel3.setText("Principal");
-        jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+        jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
 
-        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 150, 40));
+        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 150, 40));
 
-        RedesButton.setBackground(new java.awt.Color(91, 196, 175));
+        RedesButton.setBackground(new java.awt.Color(255, 255, 255));
+        RedesButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
         RedesButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 RedesButtonMouseClicked(evt);
@@ -166,14 +165,14 @@ public class viewPr extends javax.swing.JFrame {
         });
         RedesButton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(204, 255, 204));
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel5.setText("Redes ");
-        RedesButton.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+        RedesButton.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
 
-        jPanel2.add(RedesButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 150, 40));
+        jPanel2.add(RedesButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 150, 40));
 
-        UsuarioButton.setBackground(new java.awt.Color(91, 196, 175));
+        UsuarioButton.setBackground(new java.awt.Color(255, 255, 255));
+        UsuarioButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
         UsuarioButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 UsuarioButtonMouseClicked(evt);
@@ -187,14 +186,14 @@ public class viewPr extends javax.swing.JFrame {
         });
         UsuarioButton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(204, 255, 204));
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel7.setText("Usuario");
-        UsuarioButton.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+        UsuarioButton.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
 
-        jPanel2.add(UsuarioButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 150, 40));
+        jPanel2.add(UsuarioButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 150, 40));
 
-        AcercadeButton.setBackground(new java.awt.Color(91, 196, 175));
+        AcercadeButton.setBackground(new java.awt.Color(255, 255, 255));
+        AcercadeButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
         AcercadeButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AcercadeButtonMouseClicked(evt);
@@ -208,12 +207,12 @@ public class viewPr extends javax.swing.JFrame {
         });
         AcercadeButton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(204, 255, 204));
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel8.setText("Acerca de ");
         AcercadeButton.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
-        jPanel2.add(AcercadeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 150, 40));
+        jPanel2.add(AcercadeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 150, 40));
+        jPanel2.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 140, 40));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 58, 190, 620));
 
@@ -228,7 +227,6 @@ public class viewPr extends javax.swing.JFrame {
             }
         });
         jPanel4.add(Cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 10, 43, 17));
-        jPanel4.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 140, 40));
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 918, 50));
 
@@ -258,7 +256,8 @@ public class viewPr extends javax.swing.JFrame {
 
         UsuarioPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        UsuarioLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        UsuarioLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        UsuarioLabel.setForeground(new java.awt.Color(0, 153, 153));
         UsuarioLabel.setText("Seccion de usuarios*");
 
         javax.swing.GroupLayout UsuarioPanelLayout = new javax.swing.GroupLayout(UsuarioPanel);
@@ -266,16 +265,16 @@ public class viewPr extends javax.swing.JFrame {
         UsuarioPanelLayout.setHorizontalGroup(
             UsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UsuarioPanelLayout.createSequentialGroup()
-                .addContainerGap(461, Short.MAX_VALUE)
-                .addComponent(UsuarioLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(255, 255, 255))
+                .addContainerGap(334, Short.MAX_VALUE)
+                .addComponent(UsuarioLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(190, 190, 190))
         );
         UsuarioPanelLayout.setVerticalGroup(
             UsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(UsuarioPanelLayout.createSequentialGroup()
-                .addGap(224, 224, 224)
-                .addComponent(UsuarioLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(368, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(UsuarioLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(252, Short.MAX_VALUE))
         );
 
         getContentPane().add(UsuarioPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 920, 640));
@@ -351,14 +350,6 @@ public class viewPr extends javax.swing.JFrame {
         jTextArea2.setEnabled(false);
         jPanel3.add(jTextArea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 950, -1, 64));
 
-        Infotxt.setText("Info");
-        Infotxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InfotxtActionPerformed(evt);
-            }
-        });
-        jPanel3.add(Infotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(567, 67, -1, -1));
-
         ScrollPane.setViewportView(jPanel3);
 
         getContentPane().add(ScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 58, 720, 620));
@@ -394,10 +385,6 @@ public class viewPr extends javax.swing.JFrame {
         System.exit(0);
 
     }//GEN-LAST:event_CerrarActionPerformed
-
-    private void InfotxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfotxtActionPerformed
-
-    }//GEN-LAST:event_InfotxtActionPerformed
 
     private void jPanel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseEntered
         setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -443,6 +430,7 @@ public class viewPr extends javax.swing.JFrame {
         RedesPanel.setVisible(false);
         UsuarioPanel.setVisible(true);
         AcercaDePanel.setVisible(false);
+
         UsuarioLabel.setText("");
     }//GEN-LAST:event_UsuarioButtonMouseClicked
 
@@ -493,30 +481,24 @@ public class viewPr extends javax.swing.JFrame {
             }
         });
     }
-    
+
     public JButton getButtonHC() {
         return ButtonHC;
     }
-    
+
     public void setButtonHC(JButton ButtonHC) {
         this.ButtonHC = ButtonHC;
     }
-    
+
     public JButton getButtonSpa() {
         return ButtonSpa;
     }
-    
+
     public void setButtonSpa(JButton ButtonSpa) {
         this.ButtonSpa = ButtonSpa;
     }
+
     
-    public JButton getInfotxt() {
-        return Infotxt;
-    }
-    
-    public void setInfotxt(JButton Infotxt) {
-        this.Infotxt = Infotxt;
-    }
 
     public JPanel getAcercaDePanel() {
         return AcercaDePanel;
@@ -581,6 +563,15 @@ public class viewPr extends javax.swing.JFrame {
     public void setUsuarioPanel(JPanel UsuarioPanel) {
         this.UsuarioPanel = UsuarioPanel;
     }
+
+    public JLabel getUsuarioLabel() {
+        return UsuarioLabel;
+    }
+
+    public void setUsuarioLabel(JLabel UsuarioLabel) {
+        this.UsuarioLabel = UsuarioLabel;
+    }
+    
     
     
 
@@ -592,7 +583,6 @@ public class viewPr extends javax.swing.JFrame {
     private javax.swing.JButton ButtonHC;
     private javax.swing.JButton ButtonSpa;
     private javax.swing.JButton Cerrar;
-    private javax.swing.JButton Infotxt;
     private javax.swing.JLabel LabelImg;
     private javax.swing.JLabel LabelImg2;
     private javax.swing.JLabel Logo;

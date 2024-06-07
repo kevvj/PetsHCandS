@@ -5,13 +5,15 @@ import java.awt.event.ActionListener;
 
 import UseView.*;
 import com.raven.datechooser.SelectedDate;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import src.appointments;
 import src.clients;
 
-public class controller implements ActionListener {
+public class controller implements ActionListener, MouseListener {
 
     appointments app = appointments.getInstance();
     clients cli = new clients();
@@ -27,9 +29,8 @@ public class controller implements ActionListener {
 
         vpr.getButtonHC().addActionListener(this);
         vpr.getButtonSpa().addActionListener(this);
-        vpr.getInfotxt().addActionListener(this);
-        
-        
+        vpr.getUsuarioButton().addMouseListener(this);
+
         HC.getConfirmButton().addActionListener(this);
         HC.getSaveButton().addActionListener(this);
 
@@ -73,10 +74,7 @@ public class controller implements ActionListener {
             {
                 Logger.getLogger(controller.class.getName()).log(Level.SEVERE, null, ex);
             }
-            
-            
-            
-            
+
         }
 
         if (e.getSource() == vpr.getButtonSpa())
@@ -96,31 +94,50 @@ public class controller implements ActionListener {
             }
         }
 
-        if (e.getSource() == vpr.getInfotxt())
-        {
-            if (app.isConfirmed())
-            {
-                cli.handleShow();
-            }
-        }
 
         if (e.getSource() == HC.getSaveButton())
         {
             cli.setName(HC.getOwnerNametxt().getText());
             app.setPetName(HC.getPetNamejtf().getText());
             app.setConfirmed(true);
-            app.setPrice(399);
+            app.setPrice(19999);
             HC.getPanelCita().setVisible(true);
         }
 
         if (e.getSource() == HC.getConfirmButton())
         {
-            
+
             SelectedDate D = HC.getDateChooser1().getSelectedDate();
             app.setDateAppointment(D.getDay() + "/" + D.getMonth() + "/" + D.getYear());
             cli.makeAppointment();
             JOptionPane.showMessageDialog(null, "cita confirmada");
- 
+
         }
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        if (e.getSource() == vpr.getUsuarioButton()){
+            if (app.isConfirmed())
+            {
+            vpr.getUsuarioLabel().setText(cli.handleShow());
+            }
+        }
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
     }
 }

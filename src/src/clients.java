@@ -1,10 +1,9 @@
-
 package src;
 
 import javax.swing.JOptionPane;
 
-
 public class clients {
+
     private String name;
     private String id;
 
@@ -26,21 +25,22 @@ public class clients {
     public void setId(String id) {
         this.id = id;
     }
-    
-    
-    
-    public void makeAppointment(){
+
+    //Este metodo hace una cita
+    public void makeAppointment() {
         appointments app = appointments.getInstance();
-    
+
         app.setClientName(name);
     }
-    
-    public String handleShow(){
+
+    //Este metodo retorna la informacion del cliente
+    public String handleShow() {
         appointments app = appointments.getInstance();
-        
-        String t = app.getClientName() +"\n" + app.getPetName() +"\n" + app.getDateAppointment()+"\n" + app.getPrice();
-        JOptionPane.showMessageDialog(null, t);
-        
+
+        String t = "<html>El usuario " + app.getClientName() + "<br>"
+                + "Junto a su mascota "+app.getPetName() + "<br>"
+                + "Tienen una cita Programada en la fecha: "+ app.getDateAppointment() + "<br>"
+                + "Con un precio de: " +app.getPrice() + "</html>";
         return t;
     }
 }

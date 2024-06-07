@@ -322,7 +322,7 @@ public class HairCut extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "...", "...", "...", "...", "...", "...", "...", "...", "...", "...", "...", "...", "..." }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "- Servicio de Corte Cocker desde $20.000", "- Servicio de Corte Dachshund $20.000", "- Servicio de Corte French Poodle $20.000", "- Servicio de Corte Husky $20.000", "- Servicio de Corte Pastor Alemán $20.000", "- Servicio de Corte Pinsher $20.000", "- Servicio de Corte Pug $20.000", "- Servicio de Corte Schnauzer $20.000", "- Servicio de Corte Shit-Zu $20.000", "- Servicio de Corte Yorkshire $20.000", "- Servicio de Corte Beagle $20.000", "- Servicio de Corte Golden Retriever $20.000", "- Servicio de Corte Mestizos Raza Unica $20.000", "- Servicio de Corte Labrador $20.000", "- Servicio de Corte Pamerania $20.000", "- Servicio de Corte Bulldog F $20.000" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

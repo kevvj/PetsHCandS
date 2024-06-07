@@ -1,7 +1,7 @@
 
 package src;
 
-
+//Aqui se implementa el patron prototype implementando cloneable
 public class appointments implements Cloneable{
     public int price;
     public String clientName;
@@ -10,6 +10,7 @@ public class appointments implements Cloneable{
     
     public boolean confirmed;
 
+    //aqui se implementa el singleton haciendo un objeto estatico el cual solo se puede acceder desde aca porque el contructor es privado
     private static final appointments instance = new appointments();
     
     private appointments() {
