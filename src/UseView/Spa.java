@@ -74,12 +74,16 @@ public class Spa extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         ConfirmButton = new javax.swing.JButton();
         FechayHoratxt = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(400, 520));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(381, 1056));
+        jPanel1.setMaximumSize(new java.awt.Dimension(32767, 32767));
+        jPanel1.setMinimumSize(new java.awt.Dimension(0, 0));
+        jPanel1.setPreferredSize(new java.awt.Dimension(381, 1587));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(HClabelimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 13, 335, 279));
 
@@ -131,7 +135,7 @@ public class Spa extends javax.swing.JFrame {
         jPanel1.add(petNamejtf, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 565, 350, 31));
 
         SaveButton.setText("Save");
-        jPanel1.add(SaveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 640, -1, -1));
+        jPanel1.add(SaveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 700, -1, -1));
 
         PanelCita.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -240,25 +244,25 @@ public class Spa extends javax.swing.JFrame {
         PanelCitaLayout.setHorizontalGroup(
             PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelCitaLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelCitaLayout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(ConfirmButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(am1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel6)
-                        .addComponent(jLabel5)
-                        .addGroup(PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(dateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelCitaLayout.createSequentialGroup()
-                                .addComponent(am10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(am11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(21, 21, 21)
-                                .addComponent(am12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addComponent(FechayHoratxt, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap()
+                        .addGroup(PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(am1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel5)
+                            .addGroup(PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(dateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelCitaLayout.createSequentialGroup()
+                                    .addComponent(am10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(am11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(21, 21, 21)
+                                    .addComponent(am12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(FechayHoratxt, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(PanelCitaLayout.createSequentialGroup()
+                        .addGap(119, 119, 119)
+                        .addComponent(ConfirmButton)))
                 .addContainerGap(74, Short.MAX_VALUE))
         );
         PanelCitaLayout.setVerticalGroup(
@@ -284,7 +288,10 @@ public class Spa extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel1.add(PanelCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 620, -1, -1));
+        jPanel1.add(PanelCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 760, -1, -1));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "- Servicio de Spa Cocker desde $50.000", "- Servicio de Spa Dachshund $40.000", "- Servicio de Spa French Poodle $50.000", "- Servicio de Spa Husky $70.000", "- Servicio de Spa Pastor Alemán $70.000", "- Servicio de Spa Pinsher $40.000", "- Servicio de Spa Pug $40.000", "- Servicio de Spa Schnauzer $50.000", "- Servicio de Spa Shit-Zu $50.000", "- Servicio de Spa Yorkshire $40.000", "- Servicio de Spa Beagle $40.000", "- Servicio de Spa Golden Retriever $70.000", "- Servicio de Spa Mestizos Raza Unica $40.000", "- Servicio de Spa Labrador $60.000", "- Servicio de Spa Pamerania $40.000", "- Servicio de Spa Bulldog F $40.000" }));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 640, 330, 30));
 
         jScrollPane1.setViewportView(jPanel1);
 
@@ -492,6 +499,7 @@ public class Spa extends javax.swing.JFrame {
     private javax.swing.JPanel am12;
     private com.raven.datechooser.DateChooser dateChooser1;
     private javax.swing.JTextField idOwner;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
