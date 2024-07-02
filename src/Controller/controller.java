@@ -30,6 +30,7 @@ public class controller implements ActionListener, MouseListener {
         vpr.getButtonHC().addActionListener(this);
         vpr.getButtonSpa().addActionListener(this);
         vpr.getUsuarioButton().addMouseListener(this);
+        vpr.getAcercadeButton().addMouseListener(this);
 
         HC.getConfirmButton().addActionListener(this);
         HC.getSaveButton().addActionListener(this);
@@ -122,6 +123,15 @@ public class controller implements ActionListener, MouseListener {
             {
             vpr.getUsuarioLabel().setText(cli.handleShow());
             }
+        }
+        
+        if(e.getSource() == vpr.getAcercadeButton()){
+            String aboutus = "<html>En \"Bubbliny\", nos esforzamos por brindar un servicio"
+                             +" personalizado y adaptado a las necesidades individuales de"
+                             +" cada cliente peludo. Nuestro ambiente tranquilo y relajante"
+                             +" ayuda a que las mascotas se sientan cómodas y disfruten de su"
+                             +" experiencia de cuidado y tratamiento en el spa.</html>"; 
+            vpr.getAboutText().setText(aboutus);
         }
     }
 

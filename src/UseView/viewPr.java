@@ -70,8 +70,8 @@ public class viewPr extends javax.swing.JFrame {
 
         ButtonHC.setBounds(50, 50, 200, 50);
         ButtonSpa.setBounds(50, 50, 200, 50);
-        ScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        ScrollPane.getVerticalScrollBar().setUI(new CustomScrollBarUI());
+        ScrollPrincipal.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        ScrollPrincipal.getVerticalScrollBar().setUI(new CustomScrollBarUI());
 
         Cerrar.setUI(new RoundedButtonUI(new Color(182, 184, 214), Color.BLACK));
 
@@ -104,12 +104,12 @@ public class viewPr extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         Cerrar = new javax.swing.JButton();
         RedesPanel = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        RedsText = new javax.swing.JLabel();
         UsuarioPanel = new javax.swing.JPanel();
         UsuarioLabel = new javax.swing.JLabel();
         AcercaDePanel = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        ScrollPane = new javax.swing.JScrollPane();
+        AboutText = new javax.swing.JLabel();
+        ScrollPrincipal = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
         ButtonHC = new javax.swing.JButton();
         LabelImg = new javax.swing.JLabel();
@@ -232,8 +232,8 @@ public class viewPr extends javax.swing.JFrame {
 
         RedesPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setText("Seccion de redes*");
+        RedsText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        RedsText.setText("Seccion de redes*");
 
         javax.swing.GroupLayout RedesPanelLayout = new javax.swing.GroupLayout(RedesPanel);
         RedesPanel.setLayout(RedesPanelLayout);
@@ -241,14 +241,14 @@ public class viewPr extends javax.swing.JFrame {
             RedesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RedesPanelLayout.createSequentialGroup()
                 .addContainerGap(461, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(RedsText, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(255, 255, 255))
         );
         RedesPanelLayout.setVerticalGroup(
             RedesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RedesPanelLayout.createSequentialGroup()
                 .addGap(224, 224, 224)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(RedsText, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(368, Short.MAX_VALUE))
         );
 
@@ -281,29 +281,29 @@ public class viewPr extends javax.swing.JFrame {
 
         AcercaDePanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel9.setText("Seccion acerca de*");
+        AboutText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        AboutText.setText("Seccion acerca de*");
 
         javax.swing.GroupLayout AcercaDePanelLayout = new javax.swing.GroupLayout(AcercaDePanel);
         AcercaDePanel.setLayout(AcercaDePanelLayout);
         AcercaDePanelLayout.setHorizontalGroup(
             AcercaDePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AcercaDePanelLayout.createSequentialGroup()
-                .addContainerGap(461, Short.MAX_VALUE)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(255, 255, 255))
+                .addContainerGap(333, Short.MAX_VALUE)
+                .addComponent(AboutText, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(108, 108, 108))
         );
         AcercaDePanelLayout.setVerticalGroup(
             AcercaDePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AcercaDePanelLayout.createSequentialGroup()
-                .addGap(224, 224, 224)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(368, Short.MAX_VALUE))
+                .addGap(55, 55, 55)
+                .addComponent(AboutText, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
         getContentPane().add(AcercaDePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 920, 640));
 
-        ScrollPane.setBorder(null);
+        ScrollPrincipal.setBorder(null);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -350,9 +350,9 @@ public class viewPr extends javax.swing.JFrame {
         jTextArea2.setEnabled(false);
         jPanel3.add(jTextArea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 950, -1, 64));
 
-        ScrollPane.setViewportView(jPanel3);
+        ScrollPrincipal.setViewportView(jPanel3);
 
-        getContentPane().add(ScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 58, 720, 620));
+        getContentPane().add(ScrollPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 58, 720, 620));
 
         AcercaDePanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -418,26 +418,29 @@ public class viewPr extends javax.swing.JFrame {
         RedesPanel.setVisible(false);
         UsuarioPanel.setVisible(false);
         AcercaDePanel.setVisible(false);
+        ScrollPrincipal.setVisible(true);
     }//GEN-LAST:event_jPanel5MouseClicked
 
     private void RedesButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RedesButtonMouseClicked
         RedesPanel.setVisible(true);
         UsuarioPanel.setVisible(false);
         AcercaDePanel.setVisible(false);
+        ScrollPrincipal.setVisible(false);
     }//GEN-LAST:event_RedesButtonMouseClicked
 
     private void UsuarioButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UsuarioButtonMouseClicked
         RedesPanel.setVisible(false);
         UsuarioPanel.setVisible(true);
         AcercaDePanel.setVisible(false);
-
         UsuarioLabel.setText("");
+        ScrollPrincipal.setVisible(false);
     }//GEN-LAST:event_UsuarioButtonMouseClicked
 
     private void AcercadeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AcercadeButtonMouseClicked
         RedesPanel.setVisible(false);
         UsuarioPanel.setVisible(false);
         AcercaDePanel.setVisible(true);
+        ScrollPrincipal.setVisible(false);
     }//GEN-LAST:event_AcercadeButtonMouseClicked
 
     /**
@@ -571,12 +574,29 @@ public class viewPr extends javax.swing.JFrame {
     public void setUsuarioLabel(JLabel UsuarioLabel) {
         this.UsuarioLabel = UsuarioLabel;
     }
+
+    public JLabel getAboutText() {
+        return AboutText;
+    }
+
+    public void setAboutText(JLabel AboutText) {
+        this.AboutText = AboutText;
+    }
+
+    public JLabel getRedsText() {
+        return RedsText;
+    }
+
+    public void setRedsText(JLabel RedsText) {
+        this.RedsText = RedsText;
+    }
     
     
     
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel AboutText;
     private javax.swing.JPanel AcercaDePanel;
     private javax.swing.JPanel AcercaDePanel1;
     private javax.swing.JPanel AcercadeButton;
@@ -588,18 +608,17 @@ public class viewPr extends javax.swing.JFrame {
     private javax.swing.JLabel Logo;
     private javax.swing.JPanel RedesButton;
     private javax.swing.JPanel RedesPanel;
-    private javax.swing.JScrollPane ScrollPane;
+    private javax.swing.JLabel RedsText;
+    private javax.swing.JScrollPane ScrollPrincipal;
     private javax.swing.JPanel UsuarioButton;
     private javax.swing.JLabel UsuarioLabel;
     private javax.swing.JPanel UsuarioPanel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
