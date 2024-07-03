@@ -26,14 +26,21 @@ public class viewPr extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         String rutaImagen1 = "./img/a1.jpg";
         String rutaImagen2 = "./img/a2.jpg";
-
         String rutaLogo = "./img/logo.png";
-
+        String rutaRed11 = "./img/facebook.png";
+        String rutaRed12 = "./img/intagram.png";
+        String rutaRed13 = "./img/whatsapp.png";
         // Cargar la imagen desde el archivo
         ImageIcon icono = new ImageIcon(getClass().getClassLoader().getResource(rutaImagen1));
         ImageIcon icono2 = new ImageIcon(getClass().getClassLoader().getResource(rutaImagen2));
 
         ImageIcon icono3 = new ImageIcon(getClass().getClassLoader().getResource(rutaLogo));
+        ImageIcon icono4 = new ImageIcon(getClass().getClassLoader().getResource(rutaRed11));
+        ImageIcon icono5 = new ImageIcon(getClass().getClassLoader().getResource(rutaRed12));
+        ImageIcon icono6 = new ImageIcon(getClass().getClassLoader().getResource(rutaRed13));
+
+
+
 
         // Obtener el tamaño del JLabel
         int anchoLabel = LabelImg.getWidth();
@@ -44,26 +51,50 @@ public class viewPr extends javax.swing.JFrame {
 
         int anchoLabe3 = Logo.getWidth();
         int altoLabel3 = Logo.getHeight();
+        
+        int anchoLabe4 = RedFBText.getWidth();
+        int altoLabel4 = RedFBText.getHeight();
+        
+        int anchoLabe5 = RedIGText.getWidth();
+        int altoLabel5 = RedIGText.getHeight();
+        
+        int anchoLabe6 = RedWAText.getWidth();
+        int altoLabel6 = RedWAText.getHeight();
 
         // Obtener la imagen del icono
         Image imagen = icono.getImage();
         Image imagen2 = icono2.getImage();
         Image imagen3 = icono3.getImage();
+        Image imagen4 = icono4.getImage();
+        Image imagen5 = icono5.getImage();
+        Image imagen6 = icono6.getImage();
+
 
         // Ajustar el tamaño de la imagen para que se ajuste al JLabel
         Image imagenAjustada = imagen.getScaledInstance(anchoLabel, altoLabel, Image.SCALE_SMOOTH);
         Image imagenAjustada2 = imagen2.getScaledInstance(anchoLabe2, altoLabel2, Image.SCALE_SMOOTH);
         Image imagenAjustada3 = imagen3.getScaledInstance(anchoLabe3, altoLabel3, Image.SCALE_SMOOTH);
+        Image imagenAjustada4 = imagen4.getScaledInstance(anchoLabe4, altoLabel4, Image.SCALE_SMOOTH);
+        Image imagenAjustada5 = imagen5.getScaledInstance(anchoLabe5, altoLabel5, Image.SCALE_SMOOTH);
+        Image imagenAjustada6 = imagen6.getScaledInstance(anchoLabe6, altoLabel6, Image.SCALE_SMOOTH);
+
 
         // Crear un nuevo ImageIcon con la imagen ajustada
         ImageIcon iconoAjustado = new ImageIcon(imagenAjustada);
         ImageIcon iconoAjustado2 = new ImageIcon(imagenAjustada2);
         ImageIcon iconoAjustado3 = new ImageIcon(imagenAjustada3);
+        ImageIcon iconoAjustado4 = new ImageIcon(imagenAjustada4);
+        ImageIcon iconoAjustado5 = new ImageIcon(imagenAjustada5);
+        ImageIcon iconoAjustado6 = new ImageIcon(imagenAjustada6);
+
 
         // Establecer el nuevo ImageIcon en el JLabel
         LabelImg.setIcon(iconoAjustado);
         LabelImg2.setIcon(iconoAjustado2);
         Logo.setIcon(iconoAjustado3);
+        RedFBText.setIcon(iconoAjustado4);
+        RedIGText.setIcon(iconoAjustado5);
+        RedWAText.setIcon(iconoAjustado6);
 
         ButtonHC.setUI(new RoundedButtonUI(new Color(100, 180, 255), Color.BLACK));
         ButtonSpa.setUI(new RoundedButtonUI(new Color(100, 180, 255), Color.BLACK));
@@ -80,6 +111,8 @@ public class viewPr extends javax.swing.JFrame {
         RedesPanel.setVisible(false);
         UsuarioPanel.setVisible(false);
         AcercaDePanel.setVisible(false);
+        
+        PrincipalButton.setBackground(new Color(0, 255, 204));
     }
 
     /**
@@ -92,7 +125,7 @@ public class viewPr extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
+        PrincipalButton = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         RedesButton = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -104,7 +137,15 @@ public class viewPr extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         Cerrar = new javax.swing.JButton();
         RedesPanel = new javax.swing.JPanel();
-        RedsText = new javax.swing.JLabel();
+        RedFBPanel = new javax.swing.JPanel();
+        RedFBText = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        RedIGPanel = new javax.swing.JPanel();
+        RedIGText = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        RedWAPanel2 = new javax.swing.JPanel();
+        RedWAText = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         UsuarioPanel = new javax.swing.JPanel();
         UsuarioLabel = new javax.swing.JLabel();
         AcercaDePanel = new javax.swing.JPanel();
@@ -129,26 +170,26 @@ public class viewPr extends javax.swing.JFrame {
         jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
-        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
+        PrincipalButton.setBackground(new java.awt.Color(255, 255, 255));
+        PrincipalButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
+        PrincipalButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel5MouseClicked(evt);
+                PrincipalButtonMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jPanel5MouseEntered(evt);
+                PrincipalButtonMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jPanel5MouseExited(evt);
+                PrincipalButtonMouseExited(evt);
             }
         });
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PrincipalButton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel3.setText("Principal");
-        jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
+        PrincipalButton.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
 
-        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 150, 40));
+        jPanel2.add(PrincipalButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 150, 40));
 
         RedesButton.setBackground(new java.awt.Color(255, 255, 255));
         RedesButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
@@ -232,24 +273,115 @@ public class viewPr extends javax.swing.JFrame {
 
         RedesPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        RedsText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        RedsText.setText("Seccion de redes*");
+        RedFBPanel.setBackground(new java.awt.Color(255, 255, 255));
+        RedFBPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 1, true));
+
+        RedFBText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel2.setText("bubbliny ");
+
+        javax.swing.GroupLayout RedFBPanelLayout = new javax.swing.GroupLayout(RedFBPanel);
+        RedFBPanel.setLayout(RedFBPanelLayout);
+        RedFBPanelLayout.setHorizontalGroup(
+            RedFBPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RedFBPanelLayout.createSequentialGroup()
+                .addComponent(RedFBText, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40))
+        );
+        RedFBPanelLayout.setVerticalGroup(
+            RedFBPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RedFBPanelLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(28, Short.MAX_VALUE))
+            .addComponent(RedFBText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        RedIGPanel.setBackground(new java.awt.Color(255, 255, 255));
+        RedIGPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 1, true));
+
+        RedIGText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel6.setText("@bubbliny");
+
+        javax.swing.GroupLayout RedIGPanelLayout = new javax.swing.GroupLayout(RedIGPanel);
+        RedIGPanel.setLayout(RedIGPanelLayout);
+        RedIGPanelLayout.setHorizontalGroup(
+            RedIGPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RedIGPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(RedIGText, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40))
+        );
+        RedIGPanelLayout.setVerticalGroup(
+            RedIGPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RedIGPanelLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(28, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RedIGPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(RedIGText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        RedWAPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        RedWAPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 1, true));
+
+        RedWAText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel9.setText("+57 323 4182 652");
+
+        javax.swing.GroupLayout RedWAPanel2Layout = new javax.swing.GroupLayout(RedWAPanel2);
+        RedWAPanel2.setLayout(RedWAPanel2Layout);
+        RedWAPanel2Layout.setHorizontalGroup(
+            RedWAPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RedWAPanel2Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(RedWAText, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        RedWAPanel2Layout.setVerticalGroup(
+            RedWAPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RedWAPanel2Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(RedWAPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(RedWAText, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout RedesPanelLayout = new javax.swing.GroupLayout(RedesPanel);
         RedesPanel.setLayout(RedesPanelLayout);
         RedesPanelLayout.setHorizontalGroup(
             RedesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RedesPanelLayout.createSequentialGroup()
-                .addContainerGap(461, Short.MAX_VALUE)
-                .addComponent(RedsText, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(255, 255, 255))
+                .addContainerGap(410, Short.MAX_VALUE)
+                .addGroup(RedesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(RedWAPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RedIGPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RedFBPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(188, 188, 188))
         );
         RedesPanelLayout.setVerticalGroup(
             RedesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RedesPanelLayout.createSequentialGroup()
-                .addGap(224, 224, 224)
-                .addComponent(RedsText, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(368, Short.MAX_VALUE))
+                .addGap(145, 145, 145)
+                .addComponent(RedFBPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(RedIGPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(RedWAPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(153, Short.MAX_VALUE))
         );
 
         getContentPane().add(RedesPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 920, 640));
@@ -386,9 +518,9 @@ public class viewPr extends javax.swing.JFrame {
 
     }//GEN-LAST:event_CerrarActionPerformed
 
-    private void jPanel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseEntered
+    private void PrincipalButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PrincipalButtonMouseEntered
         setCursor(new Cursor(Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_jPanel5MouseEntered
+    }//GEN-LAST:event_PrincipalButtonMouseEntered
 
     private void RedesButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RedesButtonMouseEntered
         setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -402,8 +534,8 @@ public class viewPr extends javax.swing.JFrame {
         setCursor(new Cursor(Cursor.HAND_CURSOR));
     }//GEN-LAST:event_AcercadeButtonMouseEntered
 
-    private void jPanel5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseExited
-        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));    }//GEN-LAST:event_jPanel5MouseExited
+    private void PrincipalButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PrincipalButtonMouseExited
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));    }//GEN-LAST:event_PrincipalButtonMouseExited
 
     private void RedesButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RedesButtonMouseExited
         setCursor(new Cursor(Cursor.DEFAULT_CURSOR));    }//GEN-LAST:event_RedesButtonMouseExited
@@ -414,18 +546,31 @@ public class viewPr extends javax.swing.JFrame {
     private void AcercadeButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AcercadeButtonMouseExited
         setCursor(new Cursor(Cursor.DEFAULT_CURSOR));    }//GEN-LAST:event_AcercadeButtonMouseExited
 
-    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
+    private void PrincipalButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PrincipalButtonMouseClicked
         RedesPanel.setVisible(false);
         UsuarioPanel.setVisible(false);
         AcercaDePanel.setVisible(false);
         ScrollPrincipal.setVisible(true);
-    }//GEN-LAST:event_jPanel5MouseClicked
+        
+        
+        PrincipalButton.setBackground(new Color(0, 255, 204));
+        RedesButton.setBackground(new Color(255, 255, 255));
+        UsuarioButton.setBackground(new Color(255, 255, 255));
+        AcercadeButton.setBackground(new Color(255, 255, 255));
+        
+    }//GEN-LAST:event_PrincipalButtonMouseClicked
 
     private void RedesButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RedesButtonMouseClicked
         RedesPanel.setVisible(true);
         UsuarioPanel.setVisible(false);
         AcercaDePanel.setVisible(false);
         ScrollPrincipal.setVisible(false);
+        
+        PrincipalButton.setBackground(new Color(255, 255, 255));
+        RedesButton.setBackground(new Color(0, 255, 204));
+        UsuarioButton.setBackground(new Color(255, 255, 255));
+        AcercadeButton.setBackground(new Color(255, 255, 255));
+        
     }//GEN-LAST:event_RedesButtonMouseClicked
 
     private void UsuarioButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UsuarioButtonMouseClicked
@@ -434,6 +579,11 @@ public class viewPr extends javax.swing.JFrame {
         AcercaDePanel.setVisible(false);
         UsuarioLabel.setText("");
         ScrollPrincipal.setVisible(false);
+        
+        PrincipalButton.setBackground(new Color(255, 255, 255));
+        RedesButton.setBackground(new Color(255, 255, 255));
+        UsuarioButton.setBackground(new Color(0, 255, 204));
+        AcercadeButton.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_UsuarioButtonMouseClicked
 
     private void AcercadeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AcercadeButtonMouseClicked
@@ -441,6 +591,11 @@ public class viewPr extends javax.swing.JFrame {
         UsuarioPanel.setVisible(false);
         AcercaDePanel.setVisible(true);
         ScrollPrincipal.setVisible(false);
+        
+        PrincipalButton.setBackground(new Color(255, 255, 255));
+        RedesButton.setBackground(new Color(255, 255, 255));
+        UsuarioButton.setBackground(new Color(255, 255, 255));
+        AcercadeButton.setBackground(new Color(0, 255, 204));
     }//GEN-LAST:event_AcercadeButtonMouseClicked
 
     /**
@@ -584,11 +739,11 @@ public class viewPr extends javax.swing.JFrame {
     }
 
     public JLabel getRedsText() {
-        return RedsText;
+        return RedFBText;
     }
 
     public void setRedsText(JLabel RedsText) {
-        this.RedsText = RedsText;
+        this.RedFBText = RedsText;
     }
     
     
@@ -606,23 +761,31 @@ public class viewPr extends javax.swing.JFrame {
     private javax.swing.JLabel LabelImg;
     private javax.swing.JLabel LabelImg2;
     private javax.swing.JLabel Logo;
+    private javax.swing.JPanel PrincipalButton;
+    private javax.swing.JPanel RedFBPanel;
+    private javax.swing.JLabel RedFBText;
+    private javax.swing.JPanel RedIGPanel;
+    private javax.swing.JLabel RedIGText;
+    private javax.swing.JPanel RedWAPanel2;
+    private javax.swing.JLabel RedWAText;
     private javax.swing.JPanel RedesButton;
     private javax.swing.JPanel RedesPanel;
-    private javax.swing.JLabel RedsText;
     private javax.swing.JScrollPane ScrollPrincipal;
     private javax.swing.JPanel UsuarioButton;
     private javax.swing.JLabel UsuarioLabel;
     private javax.swing.JPanel UsuarioPanel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
