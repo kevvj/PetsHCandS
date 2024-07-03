@@ -279,6 +279,7 @@ public class viewPr extends javax.swing.JFrame {
         RedFBText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 153, 153));
         jLabel2.setText("bubbliny ");
 
         javax.swing.GroupLayout RedFBPanelLayout = new javax.swing.GroupLayout(RedFBPanel);
@@ -287,17 +288,17 @@ public class viewPr extends javax.swing.JFrame {
             RedFBPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RedFBPanelLayout.createSequentialGroup()
                 .addComponent(RedFBText, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         RedFBPanelLayout.setVerticalGroup(
             RedFBPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RedFBPanelLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
             .addComponent(RedFBText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RedFBPanelLayout.createSequentialGroup()
+                .addContainerGap(30, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
         );
 
         RedIGPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -306,6 +307,7 @@ public class viewPr extends javax.swing.JFrame {
         RedIGText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 153, 153));
         jLabel6.setText("@bubbliny");
 
         javax.swing.GroupLayout RedIGPanelLayout = new javax.swing.GroupLayout(RedIGPanel);
@@ -315,20 +317,20 @@ public class viewPr extends javax.swing.JFrame {
             .addGroup(RedIGPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(RedIGText, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
         RedIGPanelLayout.setVerticalGroup(
             RedIGPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RedIGPanelLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RedIGPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(RedIGText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(RedIGPanelLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         RedWAPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -337,6 +339,7 @@ public class viewPr extends javax.swing.JFrame {
         RedWAText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 153, 153));
         jLabel9.setText("+57 323 4182 652");
 
         javax.swing.GroupLayout RedWAPanel2Layout = new javax.swing.GroupLayout(RedWAPanel2);
@@ -397,23 +400,24 @@ public class viewPr extends javax.swing.JFrame {
         UsuarioPanelLayout.setHorizontalGroup(
             UsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UsuarioPanelLayout.createSequentialGroup()
-                .addContainerGap(334, Short.MAX_VALUE)
+                .addContainerGap(353, Short.MAX_VALUE)
                 .addComponent(UsuarioLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(190, 190, 190))
+                .addGap(171, 171, 171))
         );
         UsuarioPanelLayout.setVerticalGroup(
             UsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(UsuarioPanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(95, 95, 95)
                 .addComponent(UsuarioLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(252, Short.MAX_VALUE))
+                .addContainerGap(170, Short.MAX_VALUE))
         );
 
         getContentPane().add(UsuarioPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 920, 640));
 
         AcercaDePanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        AboutText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        AboutText.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        AboutText.setForeground(new java.awt.Color(0, 153, 153));
         AboutText.setText("Seccion acerca de*");
 
         javax.swing.GroupLayout AcercaDePanelLayout = new javax.swing.GroupLayout(AcercaDePanel);
