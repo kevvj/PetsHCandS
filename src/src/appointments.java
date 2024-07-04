@@ -65,6 +65,14 @@ public class appointments implements Cloneable{
     public void setDateAppointment(String dateAppointment) {
         this.dateAppointment = dateAppointment;
     }
+    
+    public void HairCutDate(){
+        
+    }
+    
+    public void SpaDate(){
+        
+    }
 
     @Override
     public Object clone() throws CloneNotSupportedException {
