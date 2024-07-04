@@ -1,13 +1,16 @@
 
 package UseView;
 
+import com.raven.datechooser.DateChooser;
 import com.raven.datechooser.SelectedDate;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 
@@ -16,7 +19,9 @@ public class Spa extends javax.swing.JFrame {
    
     public Spa() {
         initComponents();
+        PanelCita.setVisible(false);
         setLocationRelativeTo(null);
+        
         
         String rutaImagen = "./img/spa1.jpg";
 
@@ -37,6 +42,9 @@ public class Spa extends javax.swing.JFrame {
         
         SaveButton.setUI(new RoundedButtonUI(new Color(100, 180, 255), Color.BLACK));
         SaveButton.setBounds(50, 50, 200, 50);
+        
+        ConfirmButton.setUI(new RoundedButtonUI(new Color(100, 180, 255), Color.BLACK));
+        ConfirmButton.setBounds(50, 50, 200, 50);
     }
 
     /**
@@ -51,15 +59,18 @@ public class Spa extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         HClabelimg = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         ownerNametxt = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
         idOwner = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         petNamejtf = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
         SaveButton = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        Detailstxt = new javax.swing.JTextArea();
         PanelCita = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -74,20 +85,11 @@ public class Spa extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         ConfirmButton = new javax.swing.JButton();
         FechayHoratxt = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setMinimumSize(new java.awt.Dimension(0, 0));
-        jPanel1.setPreferredSize(new java.awt.Dimension(381, 1587));
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel8.setText("Agrega detalles personales");
-
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel9.setText("Nombre");
 
         ownerNametxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,14 +97,20 @@ public class Spa extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setText("Agregar informacion de la mascota");
+
         jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel13.setText("ID");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setText("Agrega detalles de la mascota");
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel9.setText("Nombre");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setText("Nombre de la mascota");
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel8.setText("Agregar informacion personal");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setText("Nombre de la mascota");
 
         petNamejtf.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         petNamejtf.setForeground(new java.awt.Color(153, 153, 153));
@@ -122,7 +130,30 @@ public class Spa extends javax.swing.JFrame {
             }
         });
 
-        SaveButton.setText("Save");
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setText("Edad, genero");
+
+        SaveButton.setText("Guardar");
+        SaveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SaveButtonActionPerformed(evt);
+            }
+        });
+
+        Detailstxt.setColumns(20);
+        Detailstxt.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Detailstxt.setForeground(new java.awt.Color(153, 153, 153));
+        Detailstxt.setRows(5);
+        Detailstxt.setText("breed, age, gender");
+        Detailstxt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                DetailstxtFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                DetailstxtFocusLost(evt);
+            }
+        });
+        jScrollPane2.setViewportView(Detailstxt);
 
         PanelCita.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -216,7 +247,7 @@ public class Spa extends javax.swing.JFrame {
         jLabel12.setText("01:00 PM");
         am1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 30));
 
-        ConfirmButton.setText("Confirm");
+        ConfirmButton.setText("Confirmar");
         ConfirmButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ConfirmButtonActionPerformed(evt);
@@ -233,7 +264,7 @@ public class Spa extends javax.swing.JFrame {
             .addGroup(PanelCitaLayout.createSequentialGroup()
                 .addGroup(PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelCitaLayout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(12, 12, 12)
                         .addGroup(PanelCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(am1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6)
@@ -248,7 +279,7 @@ public class Spa extends javax.swing.JFrame {
                                     .addComponent(am12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(FechayHoratxt, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PanelCitaLayout.createSequentialGroup()
-                        .addGap(119, 119, 119)
+                        .addGap(106, 106, 106)
                         .addComponent(ConfirmButton)))
                 .addContainerGap(74, Short.MAX_VALUE))
         );
@@ -275,80 +306,76 @@ public class Spa extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "- Servicio de Spa Cocker desde $50.000", "- Servicio de Spa Dachshund $40.000", "- Servicio de Spa French Poodle $50.000", "- Servicio de Spa Husky $70.000", "- Servicio de Spa Pastor Alemán $70.000", "- Servicio de Spa Pinsher $40.000", "- Servicio de Spa Pug $40.000", "- Servicio de Spa Schnauzer $50.000", "- Servicio de Spa Shit-Zu $50.000", "- Servicio de Spa Yorkshire $40.000", "- Servicio de Spa Beagle $40.000", "- Servicio de Spa Golden Retriever $70.000", "- Servicio de Spa Mestizos Raza Unica $40.000", "- Servicio de Spa Labrador $60.000", "- Servicio de Spa Pamerania $40.000", "- Servicio de Spa Bulldog F $40.000" }));
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 17, Short.MAX_VALUE)
+                .addComponent(PanelCita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(idOwner)
+                            .addComponent(ownerNametxt, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane2)
+                            .addComponent(petNamejtf)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(HClabelimg, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addComponent(HClabelimg, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(ownerNametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(idOwner, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(petNamejtf, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(150, 150, 150)
-                        .addComponent(SaveButton))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(PanelCita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(7, 7, 7))
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(12, 29, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(142, 142, 142)
+                .addComponent(SaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(HClabelimg, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(67, 67, 67)
+                .addComponent(HClabelimg, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
                 .addComponent(jLabel8)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel9)
-                .addGap(7, 7, 7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ownerNametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(13, 13, 13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel13)
-                .addGap(7, 7, 7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(idOwner, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
-                .addGap(13, 13, 13)
-                .addComponent(jLabel3)
-                .addGap(7, 7, 7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(petNamejtf, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45)
                 .addComponent(SaveButton)
-                .addGap(35, 35, 35)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addComponent(PanelCita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
         );
 
         jScrollPane1.setViewportView(jPanel1);
@@ -358,86 +385,9 @@ public class Spa extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmButtonActionPerformed
-
-    }//GEN-LAST:event_ConfirmButtonActionPerformed
-
-    private void am1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am1MouseExited
-        setCursor(Cursor.getDefaultCursor());
-    }//GEN-LAST:event_am1MouseExited
-
-    private void am1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am1MouseEntered
-        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_am1MouseEntered
-
-    private void am1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am1MouseClicked
-        SelectedDate D = dateChooser1.getSelectedDate();
-        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
-        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  01:00 PM" + "</html>");
-    }//GEN-LAST:event_am1MouseClicked
-
-    private void am12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am12MouseExited
-        setCursor(Cursor.getDefaultCursor());
-    }//GEN-LAST:event_am12MouseExited
-
-    private void am12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am12MouseEntered
-        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_am12MouseEntered
-
-    private void am12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am12MouseClicked
-        SelectedDate D = dateChooser1.getSelectedDate();
-        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
-        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  12:00 AM" + "</html>");
-    }//GEN-LAST:event_am12MouseClicked
-
-    private void am11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am11MouseExited
-        setCursor(Cursor.getDefaultCursor());
-    }//GEN-LAST:event_am11MouseExited
-
-    private void am11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am11MouseEntered
-        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_am11MouseEntered
-
-    private void am11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am11MouseClicked
-        SelectedDate D = dateChooser1.getSelectedDate();
-        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
-        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  11:00 AM" + "</html>");
-    }//GEN-LAST:event_am11MouseClicked
-
-    private void am10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseExited
-        setCursor(Cursor.getDefaultCursor());
-    }//GEN-LAST:event_am10MouseExited
-
-    private void am10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseEntered
-
-        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_am10MouseEntered
-
-    private void am10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseClicked
-        SelectedDate D = dateChooser1.getSelectedDate();
-        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
-        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  10:00 AM" + "</html>");
-    }//GEN-LAST:event_am10MouseClicked
-
-    private void am10MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseDragged
-
-    }//GEN-LAST:event_am10MouseDragged
-
-    private void dateChooser1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dateChooser1MouseClicked
-
-    }//GEN-LAST:event_dateChooser1MouseClicked
-
-    private void petNamejtfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_petNamejtfActionPerformed
-
-    }//GEN-LAST:event_petNamejtfActionPerformed
-
-    private void petNamejtfFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_petNamejtfFocusLost
-        if (petNamejtf.getText().equals(""))
-        {
-            petNamejtf.setText("name");
-            petNamejtf.setForeground(new Color(153, 153, 153));
-        }
-    }//GEN-LAST:event_petNamejtfFocusLost
+    private void ownerNametxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ownerNametxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ownerNametxtActionPerformed
 
     private void petNamejtfFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_petNamejtfFocusGained
         if (petNamejtf.getText().equals("name"))
@@ -447,9 +397,106 @@ public class Spa extends javax.swing.JFrame {
         };
     }//GEN-LAST:event_petNamejtfFocusGained
 
-    private void ownerNametxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ownerNametxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ownerNametxtActionPerformed
+    private void petNamejtfFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_petNamejtfFocusLost
+        if (petNamejtf.getText().equals(""))
+        {
+            petNamejtf.setText("name");
+            petNamejtf.setForeground(new Color(153, 153, 153));
+        }
+    }//GEN-LAST:event_petNamejtfFocusLost
+
+    private void petNamejtfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_petNamejtfActionPerformed
+
+    }//GEN-LAST:event_petNamejtfActionPerformed
+
+    private void SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButtonActionPerformed
+
+    }//GEN-LAST:event_SaveButtonActionPerformed
+
+    private void DetailstxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DetailstxtFocusGained
+        if (Detailstxt.getText().equals("breed, age, gender"))
+        {
+            Detailstxt.setText("");
+            Detailstxt.setForeground(new Color(0, 0, 0));
+        };
+    }//GEN-LAST:event_DetailstxtFocusGained
+
+    private void DetailstxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DetailstxtFocusLost
+        if (Detailstxt.getText().equals(""))
+        {
+            Detailstxt.setText("breed, age, gender");
+            Detailstxt.setForeground(new Color(153, 153, 153));
+        }
+    }//GEN-LAST:event_DetailstxtFocusLost
+
+    private void dateChooser1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dateChooser1MouseClicked
+
+    }//GEN-LAST:event_dateChooser1MouseClicked
+
+    private void am10MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseDragged
+
+    }//GEN-LAST:event_am10MouseDragged
+
+    private void am10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseClicked
+        SelectedDate D = dateChooser1.getSelectedDate();
+        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
+        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  10:00 AM" + "</html>");
+    }//GEN-LAST:event_am10MouseClicked
+
+    private void am10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseEntered
+
+        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_am10MouseEntered
+
+    private void am10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am10MouseExited
+        setCursor(Cursor.getDefaultCursor());
+    }//GEN-LAST:event_am10MouseExited
+
+    private void am11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am11MouseClicked
+        SelectedDate D = dateChooser1.getSelectedDate();
+        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
+        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  11:00 AM" + "</html>");
+    }//GEN-LAST:event_am11MouseClicked
+
+    private void am11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am11MouseEntered
+        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_am11MouseEntered
+
+    private void am11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am11MouseExited
+        setCursor(Cursor.getDefaultCursor());
+    }//GEN-LAST:event_am11MouseExited
+
+    private void am12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am12MouseClicked
+        SelectedDate D = dateChooser1.getSelectedDate();
+        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
+        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  12:00 AM" + "</html>");
+    }//GEN-LAST:event_am12MouseClicked
+
+    private void am12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am12MouseEntered
+        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_am12MouseEntered
+
+    private void am12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am12MouseExited
+        setCursor(Cursor.getDefaultCursor());
+    }//GEN-LAST:event_am12MouseExited
+
+    private void am1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am1MouseClicked
+        SelectedDate D = dateChooser1.getSelectedDate();
+        System.out.println(D.getDay()+"/"+D.getMonth()+"/"+D.getYear());
+        FechayHoratxt.setText("<html>"+ "Fecha:  "+D.getDay()+"/"+D.getMonth()+"/"+D.getYear() + "<br>" +"Hora:  01:00 PM" + "</html>");
+    }//GEN-LAST:event_am1MouseClicked
+
+    private void am1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am1MouseEntered
+        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_am1MouseEntered
+
+    private void am1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_am1MouseExited
+        setCursor(Cursor.getDefaultCursor());
+    }//GEN-LAST:event_am1MouseExited
+
+    private void ConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmButtonActionPerformed
+
+    }//GEN-LAST:event_ConfirmButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -542,11 +589,84 @@ public class Spa extends javax.swing.JFrame {
     public void setPetNamejtf(JTextField petNamejtf) {
         this.petNamejtf = petNamejtf;
     }
+
+    public JButton getConfirmButton() {
+        return ConfirmButton;
+    }
+
+    public void setConfirmButton(JButton ConfirmButton) {
+        this.ConfirmButton = ConfirmButton;
+    }
+
+    public JLabel getFechayHoratxt() {
+        return FechayHoratxt;
+    }
+
+    public void setFechayHoratxt(JLabel FechayHoratxt) {
+        this.FechayHoratxt = FechayHoratxt;
+    }
+
+    public JPanel getPanelCita() {
+        return PanelCita;
+    }
+
+    public void setPanelCita(JPanel PanelCita) {
+        this.PanelCita = PanelCita;
+    }
+
+    public JPanel getAm1() {
+        return am1;
+    }
+
+    public void setAm1(JPanel am1) {
+        this.am1 = am1;
+    }
+
+    public JPanel getAm10() {
+        return am10;
+    }
+
+    public void setAm10(JPanel am10) {
+        this.am10 = am10;
+    }
+
+    public JPanel getAm11() {
+        return am11;
+    }
+
+    public void setAm11(JPanel am11) {
+        this.am11 = am11;
+    }
+
+    public JPanel getAm12() {
+        return am12;
+    }
+
+    public void setAm12(JPanel am12) {
+        this.am12 = am12;
+    }
+
+    public DateChooser getDateChooser1() {
+        return dateChooser1;
+    }
+
+    public void setDateChooser1(DateChooser dateChooser1) {
+        this.dateChooser1 = dateChooser1;
+    }
+
+    public JComboBox<String> getjComboBox1() {
+        return jComboBox1;
+    }
+
+    public void setjComboBox1(JComboBox<String> jComboBox1) {
+        this.jComboBox1 = jComboBox1;
+    }
     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ConfirmButton;
+    private javax.swing.JTextArea Detailstxt;
     private javax.swing.JLabel FechayHoratxt;
     private javax.swing.JLabel HClabelimg;
     private javax.swing.JPanel PanelCita;
@@ -557,7 +677,7 @@ public class Spa extends javax.swing.JFrame {
     private javax.swing.JPanel am12;
     private com.raven.datechooser.DateChooser dateChooser1;
     private javax.swing.JTextField idOwner;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -571,6 +691,7 @@ public class Spa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField ownerNametxt;
     private javax.swing.JTextField petNamejtf;
     // End of variables declaration//GEN-END:variables

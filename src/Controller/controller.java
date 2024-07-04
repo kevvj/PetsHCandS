@@ -36,6 +36,9 @@ public class controller implements ActionListener, MouseListener {
 
         HC.getConfirmButton().addActionListener(this);
         HC.getSaveButton().addActionListener(this);
+        
+        spa.getConfirmButton().addActionListener(this);
+        spa.getSaveButton().addActionListener(this);
 
     }
 
@@ -111,6 +114,26 @@ public class controller implements ActionListener, MouseListener {
         {
 
             SelectedDate D = HC.getDateChooser1().getSelectedDate();
+            app.setDateAppointment(D.getDay() + "/" + D.getMonth() + "/" + D.getYear());
+            cli.makeAppointment();
+            JOptionPane.showMessageDialog(null, "cita confirmada");
+
+        }
+        
+        
+        if (e.getSource() == spa.getSaveButton())
+        {
+            cli.setName(spa.getOwnerNametxt().getText());
+            app.setPetName(spa.getPetNamejtf().getText());
+            app.setConfirmed(true);
+            app.setPrice(19999);
+            spa.getPanelCita().setVisible(true);
+        }
+
+        if (e.getSource() == spa.getConfirmButton())
+        {
+
+            SelectedDate D = spa.getDateChooser1().getSelectedDate();
             app.setDateAppointment(D.getDay() + "/" + D.getMonth() + "/" + D.getYear());
             cli.makeAppointment();
             JOptionPane.showMessageDialog(null, "cita confirmada");
