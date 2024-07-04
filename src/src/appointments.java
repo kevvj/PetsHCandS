@@ -75,7 +75,8 @@ public class appointments implements Cloneable{
     }
     
     public void SpaDate(){
-        JOptionPane.showMessageDialog(null, "Spa");
+        setConfirmed(true);
+        setPrice(19999);
     }
 
     @Override
