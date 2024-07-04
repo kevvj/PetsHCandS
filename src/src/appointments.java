@@ -2,6 +2,9 @@
 package src;
 
 //Aqui se implementa el patron prototype implementando cloneable
+
+import javax.swing.JOptionPane;
+
 public class appointments implements Cloneable{
     public int price;
     public String clientName;
@@ -67,11 +70,12 @@ public class appointments implements Cloneable{
     }
     
     public void HairCutDate(){
-        
+        setConfirmed(true);
+        setPrice(19999);
     }
     
     public void SpaDate(){
-        
+        JOptionPane.showMessageDialog(null, "Spa");
     }
 
     @Override

@@ -10,6 +10,8 @@ import java.awt.event.MouseListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import src.HaircuteDateCommand;
+import src.SpaDateCommand;
 import src.appointments;
 import src.clients;
 
@@ -123,6 +125,7 @@ public class controller implements ActionListener, MouseListener {
             {
             vpr.getUsuarioLabel().setText(cli.handleShow());
             }
+            new HaircuteDateCommand(app).execute();
         }
         
         if(e.getSource() == vpr.getAcercadeButton()){
@@ -132,6 +135,8 @@ public class controller implements ActionListener, MouseListener {
                              +" ayuda a que las mascotas se sientan cómodas y disfruten de su"
                              +" experiencia de cuidado y tratamiento en el spa.</html>"; 
             vpr.getAboutText().setText(aboutus);
+            
+            new SpaDateCommand(app).execute(); 
         }
     }
 

@@ -1,13 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package src;
 
-/**
- *
- * @author Kevin
- */
-public class HaircuteDateCommand {
+public class HaircuteDateCommand implements Command{
+    
+    private appointments appointment;
+
+    public HaircuteDateCommand(appointments appointment) {
+        this.appointment = appointment;
+    }
+    
+
+    @Override
+    public void execute() {
+        appointment.HairCutDate();
+    }
     
 }

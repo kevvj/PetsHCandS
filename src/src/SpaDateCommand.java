@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package src;
 
-/**
- *
- * @author Kevin
- */
-public class SpaDateCommand {
-    
+public class SpaDateCommand implements Command {
+
+    private appointments appointment;
+
+    public SpaDateCommand(appointments appointment) {
+        this.appointment = appointment;
+    }
+
+    @Override
+    public void execute() {
+        appointment.SpaDate();
+    }
+
 }
