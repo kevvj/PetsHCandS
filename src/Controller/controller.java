@@ -105,8 +105,9 @@ public class controller implements ActionListener, MouseListener {
         {
             cli.setName(HC.getOwnerNametxt().getText());
             app.setPetName(HC.getPetNamejtf().getText());
-            app.setConfirmed(true);
-            app.setPrice(19999);
+            
+            new HaircuteDateCommand(app).execute();
+            
             HC.getPanelCita().setVisible(true);
         }
 
@@ -125,8 +126,9 @@ public class controller implements ActionListener, MouseListener {
         {
             cli.setName(spa.getOwnerNametxt().getText());
             app.setPetName(spa.getPetNamejtf().getText());
-            app.setConfirmed(true);
-            app.setPrice(19999);
+            
+            new SpaDateCommand(app).execute(); 
+            
             spa.getPanelCita().setVisible(true);
         }
 
@@ -148,7 +150,7 @@ public class controller implements ActionListener, MouseListener {
             {
             vpr.getUsuarioLabel().setText(cli.handleShow());
             }
-            new HaircuteDateCommand(app).execute();
+            
         }
         
         if(e.getSource() == vpr.getAcercadeButton()){
@@ -159,7 +161,7 @@ public class controller implements ActionListener, MouseListener {
                              +" experiencia de cuidado y tratamiento en el spa.</html>"; 
             vpr.getAboutText().setText(aboutus);
             
-            new SpaDateCommand(app).execute(); 
+            
         }
     }
 

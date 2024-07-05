@@ -654,14 +654,6 @@ public class Spa extends javax.swing.JFrame {
         this.dateChooser1 = dateChooser1;
     }
 
-    public JComboBox<String> getjComboBox1() {
-        return jComboBox1;
-    }
-
-    public void setjComboBox1(JComboBox<String> jComboBox1) {
-        this.jComboBox1 = jComboBox1;
-    }
-    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
